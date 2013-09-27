@@ -32,8 +32,6 @@
 		3E16BADC17F5462800EC71DC /* LearningModulesMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BADA17F5462800EC71DC /* LearningModulesMainViewController.xib */; };
 		3E16BAE017F5464D00EC71DC /* SingleModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BADE17F5464D00EC71DC /* SingleModuleViewController.m */; };
 		3E16BAE117F5464D00EC71DC /* SingleModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BADF17F5464D00EC71DC /* SingleModuleViewController.xib */; };
-		3E16BAE517F5466B00EC71DC /* HomescreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAE317F5466B00EC71DC /* HomescreenViewController.m */; };
-		3E16BAE617F5466B00EC71DC /* HomescreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAE417F5466B00EC71DC /* HomescreenViewController.xib */; };
 		3EF4792217F61687008CD560 /* navBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4792017F61687008CD560 /* navBarViewController.m */; };
 		3EF4792317F61687008CD560 /* navBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4792117F61687008CD560 /* navBarViewController.xib */; };
 /* End PBXBuildFile section */
@@ -84,9 +82,6 @@
 		3E16BADD17F5464D00EC71DC /* SingleModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleModuleViewController.h; sourceTree = "<group>"; };
 		3E16BADE17F5464D00EC71DC /* SingleModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleModuleViewController.m; sourceTree = "<group>"; };
 		3E16BADF17F5464D00EC71DC /* SingleModuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleModuleViewController.xib; sourceTree = "<group>"; };
-		3E16BAE217F5466B00EC71DC /* HomescreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomescreenViewController.h; path = ../HomescreenViewController.h; sourceTree = "<group>"; };
-		3E16BAE317F5466B00EC71DC /* HomescreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomescreenViewController.m; path = ../HomescreenViewController.m; sourceTree = "<group>"; };
-		3E16BAE417F5466B00EC71DC /* HomescreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomescreenViewController.xib; path = ../HomescreenViewController.xib; sourceTree = "<group>"; };
 		3EF4791F17F61687008CD560 /* navBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navBarViewController.h; sourceTree = "<group>"; };
 		3EF4792017F61687008CD560 /* navBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navBarViewController.m; sourceTree = "<group>"; };
 		3EF4792117F61687008CD560 /* navBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = navBarViewController.xib; sourceTree = "<group>"; };
@@ -161,9 +156,6 @@
 				3E16BAD317F545D500EC71DC /* LoginViewController.h */,
 				3E16BAD417F545D500EC71DC /* LoginViewController.m */,
 				3E16BAD517F545D500EC71DC /* LoginViewController.xib */,
-				3E16BAE217F5466B00EC71DC /* HomescreenViewController.h */,
-				3E16BAE317F5466B00EC71DC /* HomescreenViewController.m */,
-				3E16BAE417F5466B00EC71DC /* HomescreenViewController.xib */,
 				3EF4791F17F61687008CD560 /* navBarViewController.h */,
 				3EF4792017F61687008CD560 /* navBarViewController.m */,
 				3EF4792117F61687008CD560 /* navBarViewController.xib */,
@@ -295,7 +287,6 @@
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
 				3E16BADC17F5462800EC71DC /* LearningModulesMainViewController.xib in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
-				3E16BAE617F5466B00EC71DC /* HomescreenViewController.xib in Resources */,
 				3E16BAD717F545D500EC71DC /* LoginViewController.xib in Resources */,
 				3E16BACD17F5442A00EC71DC /* MazeViewController.xib in Resources */,
 			);
@@ -319,7 +310,6 @@
 				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
 				3E16BACC17F5442A00EC71DC /* MazeViewController.m in Sources */,
 				3E16BAE017F5464D00EC71DC /* SingleModuleViewController.m in Sources */,
-				3E16BAE517F5466B00EC71DC /* HomescreenViewController.m in Sources */,
 				3E16BADB17F5462800EC71DC /* LearningModulesMainViewController.m in Sources */,
 				3E16BAA617F541C200EC71DC /* ViewController.m in Sources */,
 				3E16BAD617F545D500EC71DC /* LoginViewController.m in Sources */,
