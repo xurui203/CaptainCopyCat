@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MazeViewController : UIViewController
+- (IBAction)leftButton:(id)sender;
+- (IBAction)rightButton:(id)sender;
+- (IBAction)upButton:(id)sender;
+- (IBAction)downButton:(id)sender;
 
 @end

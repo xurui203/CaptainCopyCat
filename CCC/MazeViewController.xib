@@ -25,33 +25,53 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znn-6M-1BW">
                     <rect key="frame" x="502" y="135" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
                     <state key="normal" title="-->">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="rightButton:" destination="-1" eventType="touchUpInside" id="Zyx-fk-ayD"/>
+                        <outletCollection property="gestureRecognizers" destination="YFx-th-PxR" appends="YES" id="4IQ-hA-jwf"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V0-4u-972">
                     <rect key="frame" x="494" y="173" width="46" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="&lt;--">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="leftButton:" destination="-1" eventType="touchUpInside" id="Hub-VE-CTd"/>
+                        <outletCollection property="gestureRecognizers" destination="8ah-89-2UQ" appends="YES" id="dV3-Xa-aqH"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atO-ZD-w5T">
                     <rect key="frame" x="28" y="135" width="30" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="^">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="upButton:" destination="-1" eventType="touchUpInside" id="Ep0-3H-hde"/>
+                        <outletCollection property="gestureRecognizers" destination="YqH-e8-YHA" appends="YES" id="lpr-aG-XLC"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOr-HS-qI8">
                     <rect key="frame" x="20" y="173" width="46" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="|">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="downButton:" destination="-1" eventType="touchUpInside" id="WwG-RJ-o27"/>
+                        <outletCollection property="gestureRecognizers" destination="iQD-zQ-YHH" appends="YES" id="L67-F5-ZSM"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -59,5 +79,9 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="YqH-e8-YHA"/>
+        <tapGestureRecognizer id="iQD-zQ-YHH"/>
+        <tapGestureRecognizer id="YFx-th-PxR"/>
+        <tapGestureRecognizer id="8ah-89-2UQ"/>
     </objects>
 </document>

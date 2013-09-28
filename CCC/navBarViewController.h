@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface navBarViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *navBar;
+- (IBAction)backButton:(id)sender;
+- (IBAction)helpButton:(id)sender;
 
 @end

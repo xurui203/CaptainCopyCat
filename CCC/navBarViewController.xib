@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="navBarViewController">
             <connections>
+                <outlet property="navBar" destination="TMQ-wP-B5l" id="UGY-fy-OdA"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -27,6 +28,9 @@
                                     <state key="normal" title="Back">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="mo7-ne-OkG"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="TMQ-wP-B5l">
@@ -36,6 +40,9 @@
                                     <state key="normal" title="Help">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="helpButton:" destination="-1" eventType="touchUpInside" id="OHa-Fb-VBy"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </navigationItem>
