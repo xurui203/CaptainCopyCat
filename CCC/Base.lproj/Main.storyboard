@@ -22,9 +22,6 @@
                                 <state key="normal" title="Maze">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="kvz-xy-haW" kind="modal" id="Dbc-It-Viy"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyp-fi-2Hp">
                                 <rect key="frame" x="146" y="334" width="123" height="30"/>
@@ -32,9 +29,6 @@
                                 <state key="normal" title="Learning Modules">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="hkc-7q-DFI" kind="modal" id="fNa-KK-U9h"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -71,7 +65,7 @@
                         <viewControllerLayoutGuide type="top" id="Cr6-Cm-PmN"/>
                         <viewControllerLayoutGuide type="bottom" id="hEr-on-7h4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hEb-mh-aGE">
+                    <view key="view" contentMode="scaleToFill" id="hEb-mh-aGE" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -24,16 +24,6 @@
 		3E16BAB617F541C300EC71DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA9117F541C200EC71DC /* UIKit.framework */; };
 		3E16BABE17F541C300EC71DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BABC17F541C300EC71DC /* InfoPlist.strings */; };
 		3E16BAC017F541C300EC71DC /* CCCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BABF17F541C300EC71DC /* CCCTests.m */; };
-		3E16BACC17F5442A00EC71DC /* MazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BACA17F5442A00EC71DC /* MazeViewController.m */; };
-		3E16BACD17F5442A00EC71DC /* MazeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BACB17F5442A00EC71DC /* MazeViewController.xib */; };
-		3E16BAD617F545D500EC71DC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAD417F545D500EC71DC /* LoginViewController.m */; };
-		3E16BAD717F545D500EC71DC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAD517F545D500EC71DC /* LoginViewController.xib */; };
-		3E16BADB17F5462800EC71DC /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAD917F5462800EC71DC /* LearningModulesMainViewController.m */; };
-		3E16BADC17F5462800EC71DC /* LearningModulesMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BADA17F5462800EC71DC /* LearningModulesMainViewController.xib */; };
-		3E16BAE017F5464D00EC71DC /* SingleModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BADE17F5464D00EC71DC /* SingleModuleViewController.m */; };
-		3E16BAE117F5464D00EC71DC /* SingleModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BADF17F5464D00EC71DC /* SingleModuleViewController.xib */; };
-		3E16BAE517F5466B00EC71DC /* HomescreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAE317F5466B00EC71DC /* HomescreenViewController.m */; };
-		3E16BAE617F5466B00EC71DC /* HomescreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAE417F5466B00EC71DC /* HomescreenViewController.xib */; };
 		3E4ADD3817F9CA9C00353CF4 /* MainMazeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3717F9CA9C00353CF4 /* MainMazeScene.m */; };
 		3E4ADD3B17FB63F200353CF4 /* CCCPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3A17FB63F200353CF4 /* CCCPlayer.m */; };
 		3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3E17FB663500353CF4 /* CCCKangaroo.m */; };
@@ -41,8 +31,6 @@
 		3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4417FB674700353CF4 /* CCCKangarooPracticeModule.m */; };
 		3E4ADD4C17FB6D1B00353CF4 /* LoginScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4B17FB6D1B00353CF4 /* LoginScene.m */; };
 		3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */; };
-		3EF4792217F61687008CD560 /* navBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4792017F61687008CD560 /* navBarViewController.m */; };
-		3EF4792317F61687008CD560 /* navBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4792117F61687008CD560 /* navBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,21 +67,6 @@
 		3E16BABB17F541C300EC71DC /* CCCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCCTests-Info.plist"; sourceTree = "<group>"; };
 		3E16BABD17F541C300EC71DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E16BABF17F541C300EC71DC /* CCCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCTests.m; sourceTree = "<group>"; };
-		3E16BAC917F5442A00EC71DC /* MazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeViewController.h; sourceTree = "<group>"; };
-		3E16BACA17F5442A00EC71DC /* MazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeViewController.m; sourceTree = "<group>"; };
-		3E16BACB17F5442A00EC71DC /* MazeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MazeViewController.xib; sourceTree = "<group>"; };
-		3E16BAD317F545D500EC71DC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		3E16BAD417F545D500EC71DC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		3E16BAD517F545D500EC71DC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		3E16BAD817F5462800EC71DC /* LearningModulesMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningModulesMainViewController.h; sourceTree = "<group>"; };
-		3E16BAD917F5462800EC71DC /* LearningModulesMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMainViewController.m; sourceTree = "<group>"; };
-		3E16BADA17F5462800EC71DC /* LearningModulesMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearningModulesMainViewController.xib; sourceTree = "<group>"; };
-		3E16BADD17F5464D00EC71DC /* SingleModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleModuleViewController.h; sourceTree = "<group>"; };
-		3E16BADE17F5464D00EC71DC /* SingleModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleModuleViewController.m; sourceTree = "<group>"; };
-		3E16BADF17F5464D00EC71DC /* SingleModuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleModuleViewController.xib; sourceTree = "<group>"; };
-		3E16BAE217F5466B00EC71DC /* HomescreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomescreenViewController.h; path = ../HomescreenViewController.h; sourceTree = "<group>"; };
-		3E16BAE317F5466B00EC71DC /* HomescreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomescreenViewController.m; path = ../HomescreenViewController.m; sourceTree = "<group>"; };
-		3E16BAE417F5466B00EC71DC /* HomescreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomescreenViewController.xib; path = ../HomescreenViewController.xib; sourceTree = "<group>"; };
 		3E4ADD3617F9CA9C00353CF4 /* MainMazeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMazeScene.h; sourceTree = "<group>"; };
 		3E4ADD3717F9CA9C00353CF4 /* MainMazeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMazeScene.m; sourceTree = "<group>"; };
 		3E4ADD3917FB63F200353CF4 /* CCCPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCPlayer.h; sourceTree = "<group>"; };
@@ -108,9 +81,6 @@
 		3E4ADD4B17FB6D1B00353CF4 /* LoginScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginScene.m; path = ../LoginScene.m; sourceTree = "<group>"; };
 		3E4ADD4D17FB6E9B00353CF4 /* CCCDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCDefault.h; sourceTree = "<group>"; };
 		3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCDefault.m; sourceTree = "<group>"; };
-		3EF4791F17F61687008CD560 /* navBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navBarViewController.h; sourceTree = "<group>"; };
-		3EF4792017F61687008CD560 /* navBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navBarViewController.m; sourceTree = "<group>"; };
-		3EF4792117F61687008CD560 /* navBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = navBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +144,6 @@
 			children = (
 				3E4ADD4A17FB6D1B00353CF4 /* LoginScene.h */,
 				3E4ADD4B17FB6D1B00353CF4 /* LoginScene.m */,
-				3E4ADD3C17FB641500353CF4 /* Other */,
 				3E16BA9E17F541C200EC71DC /* AppDelegate.h */,
 				3E16BA9F17F541C200EC71DC /* AppDelegate.m */,
 				3E16BAA117F541C200EC71DC /* Main.storyboard */,
@@ -219,31 +188,6 @@
 				3E16BABC17F541C300EC71DC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3E4ADD3C17FB641500353CF4 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				3E16BAD317F545D500EC71DC /* LoginViewController.h */,
-				3E16BAD417F545D500EC71DC /* LoginViewController.m */,
-				3E16BAD517F545D500EC71DC /* LoginViewController.xib */,
-				3E16BAE217F5466B00EC71DC /* HomescreenViewController.h */,
-				3E16BAE317F5466B00EC71DC /* HomescreenViewController.m */,
-				3E16BAE417F5466B00EC71DC /* HomescreenViewController.xib */,
-				3EF4791F17F61687008CD560 /* navBarViewController.h */,
-				3EF4792017F61687008CD560 /* navBarViewController.m */,
-				3EF4792117F61687008CD560 /* navBarViewController.xib */,
-				3E16BAC917F5442A00EC71DC /* MazeViewController.h */,
-				3E16BACA17F5442A00EC71DC /* MazeViewController.m */,
-				3E16BACB17F5442A00EC71DC /* MazeViewController.xib */,
-				3E16BAD817F5462800EC71DC /* LearningModulesMainViewController.h */,
-				3E16BAD917F5462800EC71DC /* LearningModulesMainViewController.m */,
-				3E16BADA17F5462800EC71DC /* LearningModulesMainViewController.xib */,
-				3E16BADD17F5464D00EC71DC /* SingleModuleViewController.h */,
-				3E16BADE17F5464D00EC71DC /* SingleModuleViewController.m */,
-				3E16BADF17F5464D00EC71DC /* SingleModuleViewController.xib */,
-			);
-			name = Other;
 			sourceTree = "<group>";
 		};
 		3E4ADD4617FB675700353CF4 /* Characters */ = {
@@ -355,16 +299,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EF4792317F61687008CD560 /* navBarViewController.xib in Resources */,
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
-				3E16BAE117F5464D00EC71DC /* SingleModuleViewController.xib in Resources */,
 				3E16BAAD17F541C300EC71DC /* Images.xcassets in Resources */,
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
-				3E16BADC17F5462800EC71DC /* LearningModulesMainViewController.xib in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
-				3E16BAE617F5466B00EC71DC /* HomescreenViewController.xib in Resources */,
-				3E16BAD717F545D500EC71DC /* LoginViewController.xib in Resources */,
-				3E16BACD17F5442A00EC71DC /* MazeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,18 +324,12 @@
 				3E4ADD3817F9CA9C00353CF4 /* MainMazeScene.m in Sources */,
 				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
 				3E4ADD4217FB669D00353CF4 /* CCCPracticeModuleMenuPage.m in Sources */,
-				3E16BACC17F5442A00EC71DC /* MazeViewController.m in Sources */,
 				3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */,
-				3E16BAE017F5464D00EC71DC /* SingleModuleViewController.m in Sources */,
-				3E16BAE517F5466B00EC71DC /* HomescreenViewController.m in Sources */,
 				3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */,
 				3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */,
-				3E16BADB17F5462800EC71DC /* LearningModulesMainViewController.m in Sources */,
 				3E16BAA617F541C200EC71DC /* ViewController.m in Sources */,
-				3E16BAD617F545D500EC71DC /* LoginViewController.m in Sources */,
 				3E4ADD3B17FB63F200353CF4 /* CCCPlayer.m in Sources */,
 				3E16BAA017F541C200EC71DC /* AppDelegate.m in Sources */,
-				3EF4792217F61687008CD560 /* navBarViewController.m in Sources */,
 				3E4ADD4C17FB6D1B00353CF4 /* LoginScene.m in Sources */,
 				3E16BA9C17F541C200EC71DC /* main.m in Sources */,
 			);
