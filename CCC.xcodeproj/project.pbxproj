@@ -29,8 +29,11 @@
 		3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3E17FB663500353CF4 /* CCCKangaroo.m */; };
 		3E4ADD4217FB669D00353CF4 /* CCCPracticeModuleMenuPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4117FB669D00353CF4 /* CCCPracticeModuleMenuPage.m */; };
 		3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4417FB674700353CF4 /* CCCKangarooPracticeModule.m */; };
-		3E4ADD4C17FB6D1B00353CF4 /* LoginScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4B17FB6D1B00353CF4 /* LoginScene.m */; };
 		3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */; };
+		3E5EC1D017FDDE440029F506 /* HomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC1CF17FDDE440029F506 /* HomeScreen.m */; };
+		3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22017FE58210029F506 /* LoginViewController.m */; };
+		3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */; };
+		3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22617FE64510029F506 /* MainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +80,16 @@
 		3E4ADD4117FB669D00353CF4 /* CCCPracticeModuleMenuPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCPracticeModuleMenuPage.m; sourceTree = "<group>"; };
 		3E4ADD4317FB674700353CF4 /* CCCKangarooPracticeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCKangarooPracticeModule.h; sourceTree = "<group>"; };
 		3E4ADD4417FB674700353CF4 /* CCCKangarooPracticeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCKangarooPracticeModule.m; sourceTree = "<group>"; };
-		3E4ADD4A17FB6D1B00353CF4 /* LoginScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginScene.h; path = ../LoginScene.h; sourceTree = "<group>"; };
-		3E4ADD4B17FB6D1B00353CF4 /* LoginScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginScene.m; path = ../LoginScene.m; sourceTree = "<group>"; };
 		3E4ADD4D17FB6E9B00353CF4 /* CCCDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCDefault.h; sourceTree = "<group>"; };
 		3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCDefault.m; sourceTree = "<group>"; };
+		3E5EC1CE17FDDE440029F506 /* HomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreen.h; sourceTree = "<group>"; };
+		3E5EC1CF17FDDE440029F506 /* HomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreen.m; sourceTree = "<group>"; };
+		3E5EC21F17FE58210029F506 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3E5EC22017FE58210029F506 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningModulesMainViewController.h; sourceTree = "<group>"; };
+		3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMainViewController.m; sourceTree = "<group>"; };
+		3E5EC22517FE64510029F506 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		3E5EC22617FE64510029F506 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,15 +151,21 @@
 		3E16BA9517F541C200EC71DC /* CCC */ = {
 			isa = PBXGroup;
 			children = (
-				3E4ADD4A17FB6D1B00353CF4 /* LoginScene.h */,
-				3E4ADD4B17FB6D1B00353CF4 /* LoginScene.m */,
 				3E16BA9E17F541C200EC71DC /* AppDelegate.h */,
+				3E5EC21F17FE58210029F506 /* LoginViewController.h */,
+				3E5EC22017FE58210029F506 /* LoginViewController.m */,
+				3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */,
+				3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */,
 				3E16BA9F17F541C200EC71DC /* AppDelegate.m */,
 				3E16BAA117F541C200EC71DC /* Main.storyboard */,
 				3E16BAA417F541C200EC71DC /* ViewController.h */,
+				3E5EC22517FE64510029F506 /* MainMenuViewController.h */,
+				3E5EC22617FE64510029F506 /* MainMenuViewController.m */,
 				3E16BAA517F541C200EC71DC /* ViewController.m */,
 				3E16BAA717F541C200EC71DC /* MyScene.h */,
 				3E16BAA817F541C200EC71DC /* MyScene.m */,
+				3E5EC1CE17FDDE440029F506 /* HomeScreen.h */,
+				3E5EC1CF17FDDE440029F506 /* HomeScreen.m */,
 				3E4ADD4617FB675700353CF4 /* Characters */,
 				3E4ADD4817FB676500353CF4 /* Practice Modules */,
 				3E4ADD4917FB677200353CF4 /* Mazez */,
@@ -322,15 +337,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E4ADD3817F9CA9C00353CF4 /* MainMazeScene.m in Sources */,
+				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
 				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
 				3E4ADD4217FB669D00353CF4 /* CCCPracticeModuleMenuPage.m in Sources */,
 				3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */,
+				3E5EC1D017FDDE440029F506 /* HomeScreen.m in Sources */,
+				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
 				3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */,
 				3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */,
 				3E16BAA617F541C200EC71DC /* ViewController.m in Sources */,
+				3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */,
 				3E4ADD3B17FB63F200353CF4 /* CCCPlayer.m in Sources */,
 				3E16BAA017F541C200EC71DC /* AppDelegate.m in Sources */,
-				3E4ADD4C17FB6D1B00353CF4 /* LoginScene.m in Sources */,
 				3E16BA9C17F541C200EC71DC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

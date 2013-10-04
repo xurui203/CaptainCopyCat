@@ -1,13 +1,13 @@
 //
-//  LoginScene.h
+//  HomeScreen.h
 //  CCC
 //
-//  Created by Ann Niou on 10/1/13.
+//  Created by Ann Niou on 10/3/13.
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface LoginScene : SKScene
+@interface HomeScreen : SKScene
 
 @end

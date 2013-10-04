@@ -1,18 +1,18 @@
 //
-//  LoginViewController.m
+//  MainMenuViewController.m
 //  CCC
 //
-//  Created by Ann Niou on 9/27/13.
+//  Created by Ann Niou on 10/3/13.
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
-#import "LoginViewController.h"
 #import "MainMenuViewController.h"
-@interface LoginViewController ()
+
+@interface MainMenuViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation MainMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,26 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	// Do any additional setup after loading the view.
 }
-
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"loginToMenu"]) {
-//        [segue.destinationViewController]
-//    }
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)LoginButton {
-}
+
 @end
