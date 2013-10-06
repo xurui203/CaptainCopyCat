@@ -34,6 +34,7 @@
 		5B479DFF18013211009A6818 /* KangarooModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479DFE18013211009A6818 /* KangarooModuleViewController.m */; };
 		5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479E011801380D009A6818 /* LevelOneMaze.m */; };
 		5B479E0518013861009A6818 /* LevelOneMazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479E0418013861009A6818 /* LevelOneMazeViewController.m */; };
+		5B479E0718013A81009A6818 /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479E0618013A80009A6818 /* HomeIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		5B479E011801380D009A6818 /* LevelOneMaze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelOneMaze.m; path = Model/LevelOneMaze.m; sourceTree = "<group>"; };
 		5B479E0318013861009A6818 /* LevelOneMazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelOneMazeViewController.h; sourceTree = "<group>"; };
 		5B479E0418013861009A6818 /* LevelOneMazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelOneMazeViewController.m; sourceTree = "<group>"; };
+		5B479E0618013A80009A6818 /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		3E16BA9617F541C200EC71DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B479E0618013A80009A6818 /* HomeIcon.png */,
 				3E16BAAA17F541C200EC71DC /* Spaceship.png */,
 				5B479DFB180131CF009A6818 /* Kangeroo.png */,
 				5B479DF918012FCF009A6818 /* CCCHomepage_iPhone5.png */,
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */,
+				5B479E0718013A81009A6818 /* HomeIcon.png in Resources */,
 				5B479DFC180131CF009A6818 /* Kangeroo.png in Resources */,
 				5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */,
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
