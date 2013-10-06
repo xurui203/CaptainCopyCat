@@ -7,6 +7,7 @@
 //
 
 #import "LevelOneMaze.h"
+#import "LevelOneMazeViewController.h"
 
 @implementation LevelOneMaze
 

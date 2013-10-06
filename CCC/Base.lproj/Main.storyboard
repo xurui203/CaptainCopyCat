@@ -68,10 +68,15 @@
                         <viewControllerLayoutGuide type="top" id="g4y-1D-kcT"/>
                         <viewControllerLayoutGuide type="bottom" id="n65-6Q-cRf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nNn-ni-tq5">
+                    <view key="view" contentMode="scaleToFill" id="nNn-ni-tq5" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgJ-CE-foY" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="322"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNQ-kM-F8e">
                                 <rect key="frame" x="431" y="9" width="39" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,49 +114,32 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="A6B-O1-owT" kind="modal" id="tmo-t7-eDk"/>
+                                    <action selector="playLevelButton:" destination="vI0-Ed-55x" eventType="touchUpInside" id="aJ7-yG-Kd9"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaT-Px-ReB">
+                                <rect key="frame" x="0.0" y="288" width="30" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81164989089231554" green="1" blue="0.87939551883671796" alpha="0.47999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="➹">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="levelDescription" destination="3VP-TR-ooj" id="66t-MT-qTJ"/>
+                        <outlet property="playButton" destination="xVF-uJ-eAW" id="zSe-kH-4yt"/>
+                        <outlet property="skView" destination="jgJ-CE-foY" id="AYo-Gt-D6a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQL-XT-GYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="690" y="815"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9nd-PR-dmK">
-            <objects>
-                <viewController id="A6B-O1-owT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JPI-1J-mGE"/>
-                        <viewControllerLayoutGuide type="bottom" id="eye-ej-jMS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IwL-yc-5dn">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Level 1 Maze" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyB-UR-LtL">
-                                <rect key="frame" x="144" y="145" width="231" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YKa-GQ-3hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="690" y="1275"/>
         </scene>
         <!--Maze Levels View Controller - Maze Menu-->
         <scene sceneID="TE3-BG-9jG">
@@ -505,6 +493,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="fh0-Jh-Rdq"/>
         <segue reference="d8y-fA-bBJ"/>
-        <segue reference="NvF-w1-9lr"/>
+        <segue reference="GCT-6h-iNU"/>
     </inferredMetricsTieBreakers>
 </document>
