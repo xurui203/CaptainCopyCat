@@ -1,13 +1,13 @@
 //
-//  CCCPracticeModuleMenuPage.h
+//  CCCPlayer.m
 //  CCC
 //
 //  Created by Ann Niou on 10/1/13.
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
+#import "Player.h"
 
-@interface CCCPracticeModuleMenuPage : SKScene
+@implementation Player
 
 @end

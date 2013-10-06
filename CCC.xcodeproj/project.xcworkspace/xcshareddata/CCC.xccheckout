@@ -5,19 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>74F8832C-940B-4E6B-9C5B-53E5F80DD956</string>
+=======
+	<string>90BCEFEF-EC1B-4D20-93A5-82DECB91B44A</string>
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 	<key>IDESourceControlProjectName</key>
 	<string>CCC</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>CE52A8EE-CD09-4170-8325-EDD7F1A3DD4A</key>
+=======
+		<key>8020810A-1F9E-4AF9-A7D2-8EAF813C8D8C</key>
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 		<string>https://github.com/xurui203/CaptainCopyCat.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CCC.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>CE52A8EE-CD09-4170-8325-EDD7F1A3DD4A</key>
+=======
+		<key>8020810A-1F9E-4AF9-A7D2-8EAF813C8D8C</key>
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +37,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
 	<string>CE52A8EE-CD09-4170-8325-EDD7F1A3DD4A</string>
+=======
+	<string>8020810A-1F9E-4AF9-A7D2-8EAF813C8D8C</string>
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>CE52A8EE-CD09-4170-8325-EDD7F1A3DD4A</string>
+=======
+			<string>8020810A-1F9E-4AF9-A7D2-8EAF813C8D8C</string>
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 			<key>IDESourceControlWCCName</key>
 			<string>CaptainCopyCat</string>
 		</dict>

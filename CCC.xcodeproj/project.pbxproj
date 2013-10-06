@@ -15,25 +15,19 @@
 		3E16BA9C17F541C200EC71DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BA9B17F541C200EC71DC /* main.m */; };
 		3E16BAA017F541C200EC71DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BA9F17F541C200EC71DC /* AppDelegate.m */; };
 		3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAA117F541C200EC71DC /* Main.storyboard */; };
-		3E16BAA617F541C200EC71DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAA517F541C200EC71DC /* ViewController.m */; };
 		3E16BAA917F541C200EC71DC /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAA817F541C200EC71DC /* MyScene.m */; };
 		3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAAA17F541C200EC71DC /* Spaceship.png */; };
-		3E16BAAD17F541C300EC71DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAAC17F541C300EC71DC /* Images.xcassets */; };
 		3E16BAB417F541C300EC71DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BAB317F541C300EC71DC /* XCTest.framework */; };
 		3E16BAB517F541C300EC71DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA8D17F541C200EC71DC /* Foundation.framework */; };
 		3E16BAB617F541C300EC71DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA9117F541C200EC71DC /* UIKit.framework */; };
 		3E16BABE17F541C300EC71DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BABC17F541C300EC71DC /* InfoPlist.strings */; };
 		3E16BAC017F541C300EC71DC /* CCCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BABF17F541C300EC71DC /* CCCTests.m */; };
-		3E4ADD3817F9CA9C00353CF4 /* MainMazeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3717F9CA9C00353CF4 /* MainMazeScene.m */; };
-		3E4ADD3B17FB63F200353CF4 /* CCCPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3A17FB63F200353CF4 /* CCCPlayer.m */; };
-		3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3E17FB663500353CF4 /* CCCKangaroo.m */; };
-		3E4ADD4217FB669D00353CF4 /* CCCPracticeModuleMenuPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4117FB669D00353CF4 /* CCCPracticeModuleMenuPage.m */; };
-		3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4417FB674700353CF4 /* CCCKangarooPracticeModule.m */; };
-		3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */; };
-		3E5EC1D017FDDE440029F506 /* HomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC1CF17FDDE440029F506 /* HomeScreen.m */; };
+		3E4ADD3B17FB63F200353CF4 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD3A17FB63F200353CF4 /* Player.m */; };
+		3E4ADD4F17FB6E9B00353CF4 /* Default.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4ADD4E17FB6E9B00353CF4 /* Default.m */; };
 		3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22017FE58210029F506 /* LoginViewController.m */; };
 		3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */; };
 		3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22617FE64510029F506 /* MainMenuViewController.m */; };
+<<<<<<< HEAD
 		3E5EC22E1800A01A0029F506 /* mazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22D1800A01A0029F506 /* mazeViewController.m */; };
 		3E5EC2391800CB130029F506 /* APAAdventureScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2301800CB130029F506 /* APAAdventureScene.m */; };
 		3E5EC23A1800CB130029F506 /* APACave.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2321800CB130029F506 /* APACave.m */; };
@@ -44,6 +38,19 @@
 		3E5EC2461800D61C0029F506 /* APAGraphicsUtilities.m in Resources */ = {isa = PBXBuildFile; fileRef = 3E5EC2441800D61C0029F506 /* APAGraphicsUtilities.m */; };
 		3E5EC24C1800E2340029F506 /* APAParallaxSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC24B1800E2340029F506 /* APAParallaxSprite.m */; };
 		3E5EC24E1800F4800029F506 /* CCC_running.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3E5EC24D1800F4800029F506 /* CCC_running.atlas */; };
+=======
+		5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF418012A95009A6818 /* CCCHomepage.png */; };
+		5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */; };
+		5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF918012FCF009A6818 /* CCCHomepage_iPhone5.png */; };
+		5B479DFC180131CF009A6818 /* Kangeroo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DFB180131CF009A6818 /* Kangeroo.png */; };
+		5B479DFF18013211009A6818 /* KangarooModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479DFE18013211009A6818 /* KangarooModuleViewController.m */; };
+		5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479E011801380D009A6818 /* LevelOneMaze.m */; };
+		5B479E0518013861009A6818 /* LevelOneMazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479E0418013861009A6818 /* LevelOneMazeViewController.m */; };
+		5B479E0718013A81009A6818 /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479E0618013A80009A6818 /* HomeIcon.png */; };
+		5BC218DD18013EED001FC9A1 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC218DC18013EED001FC9A1 /* Eagle.png */; };
+		5BC218DF18013F2F001FC9A1 /* Gecko.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC218DE18013F2F001FC9A1 /* Gecko.png */; };
+		5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC218E1180142EA001FC9A1 /* Obstacle.m */; };
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,37 +76,25 @@
 		3E16BA9E17F541C200EC71DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E16BA9F17F541C200EC71DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E16BAA217F541C200EC71DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3E16BAA417F541C200EC71DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3E16BAA517F541C200EC71DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3E16BAA717F541C200EC71DC /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		3E16BAA817F541C200EC71DC /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		3E16BAAA17F541C200EC71DC /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
-		3E16BAAC17F541C300EC71DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E16BAB217F541C300EC71DC /* CCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E16BAB317F541C300EC71DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3E16BABB17F541C300EC71DC /* CCCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCCTests-Info.plist"; sourceTree = "<group>"; };
 		3E16BABD17F541C300EC71DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E16BABF17F541C300EC71DC /* CCCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCTests.m; sourceTree = "<group>"; };
-		3E4ADD3617F9CA9C00353CF4 /* MainMazeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMazeScene.h; sourceTree = "<group>"; };
-		3E4ADD3717F9CA9C00353CF4 /* MainMazeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMazeScene.m; sourceTree = "<group>"; };
-		3E4ADD3917FB63F200353CF4 /* CCCPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCPlayer.h; sourceTree = "<group>"; };
-		3E4ADD3A17FB63F200353CF4 /* CCCPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCPlayer.m; sourceTree = "<group>"; };
-		3E4ADD3D17FB663500353CF4 /* CCCKangaroo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCKangaroo.h; sourceTree = "<group>"; };
-		3E4ADD3E17FB663500353CF4 /* CCCKangaroo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCKangaroo.m; sourceTree = "<group>"; };
-		3E4ADD4017FB669D00353CF4 /* CCCPracticeModuleMenuPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCPracticeModuleMenuPage.h; sourceTree = "<group>"; };
-		3E4ADD4117FB669D00353CF4 /* CCCPracticeModuleMenuPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCPracticeModuleMenuPage.m; sourceTree = "<group>"; };
-		3E4ADD4317FB674700353CF4 /* CCCKangarooPracticeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCKangarooPracticeModule.h; sourceTree = "<group>"; };
-		3E4ADD4417FB674700353CF4 /* CCCKangarooPracticeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCKangarooPracticeModule.m; sourceTree = "<group>"; };
-		3E4ADD4D17FB6E9B00353CF4 /* CCCDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCDefault.h; sourceTree = "<group>"; };
-		3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCDefault.m; sourceTree = "<group>"; };
-		3E5EC1CE17FDDE440029F506 /* HomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreen.h; sourceTree = "<group>"; };
-		3E5EC1CF17FDDE440029F506 /* HomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreen.m; sourceTree = "<group>"; };
+		3E4ADD3917FB63F200353CF4 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3E4ADD3A17FB63F200353CF4 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		3E4ADD4D17FB6E9B00353CF4 /* Default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Default.h; sourceTree = "<group>"; };
+		3E4ADD4E17FB6E9B00353CF4 /* Default.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Default.m; sourceTree = "<group>"; };
 		3E5EC21F17FE58210029F506 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3E5EC22017FE58210029F506 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningModulesMainViewController.h; sourceTree = "<group>"; };
 		3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMainViewController.m; sourceTree = "<group>"; };
 		3E5EC22517FE64510029F506 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		3E5EC22617FE64510029F506 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		3E5EC22C1800A01A0029F506 /* mazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mazeViewController.h; sourceTree = "<group>"; };
 		3E5EC22D1800A01A0029F506 /* mazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mazeViewController.m; sourceTree = "<group>"; };
 		3E5EC22F1800CB130029F506 /* APAAdventureScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAAdventureScene.h; path = redamazesofar/APAAdventureScene.h; sourceTree = "<group>"; };
@@ -117,6 +112,24 @@
 		3E5EC24A1800E2340029F506 /* APAParallaxSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAParallaxSprite.h; sourceTree = "<group>"; };
 		3E5EC24B1800E2340029F506 /* APAParallaxSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAParallaxSprite.m; sourceTree = "<group>"; };
 		3E5EC24D1800F4800029F506 /* CCC_running.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CCC_running.atlas; sourceTree = "<group>"; };
+=======
+		5B479DF418012A95009A6818 /* CCCHomepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CCCHomepage.png; sourceTree = "<group>"; };
+		5B479DF618012EFF009A6818 /* MazeLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeLevelsViewController.h; sourceTree = "<group>"; };
+		5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeLevelsViewController.m; sourceTree = "<group>"; };
+		5B479DF918012FCF009A6818 /* CCCHomepage_iPhone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CCCHomepage_iPhone5.png; sourceTree = "<group>"; };
+		5B479DFB180131CF009A6818 /* Kangeroo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kangeroo.png; sourceTree = "<group>"; };
+		5B479DFD18013211009A6818 /* KangarooModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KangarooModuleViewController.h; sourceTree = "<group>"; };
+		5B479DFE18013211009A6818 /* KangarooModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KangarooModuleViewController.m; sourceTree = "<group>"; };
+		5B479E001801380D009A6818 /* LevelOneMaze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelOneMaze.h; path = Model/LevelOneMaze.h; sourceTree = "<group>"; };
+		5B479E011801380D009A6818 /* LevelOneMaze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelOneMaze.m; path = Model/LevelOneMaze.m; sourceTree = "<group>"; };
+		5B479E0318013861009A6818 /* LevelOneMazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelOneMazeViewController.h; sourceTree = "<group>"; };
+		5B479E0418013861009A6818 /* LevelOneMazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelOneMazeViewController.m; sourceTree = "<group>"; };
+		5B479E0618013A80009A6818 /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
+		5BC218DC18013EED001FC9A1 /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
+		5BC218DE18013F2F001FC9A1 /* Gecko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gecko.png; sourceTree = "<group>"; };
+		5BC218E0180142EA001FC9A1 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = Model/Obstacle.h; sourceTree = "<group>"; };
+		5BC218E1180142EA001FC9A1 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Obstacle.m; path = Model/Obstacle.m; sourceTree = "<group>"; };
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +195,10 @@
 				3E5EC24A1800E2340029F506 /* APAParallaxSprite.h */,
 				3E5EC24B1800E2340029F506 /* APAParallaxSprite.m */,
 				3E16BA9E17F541C200EC71DC /* AppDelegate.h */,
+				3E16BA9F17F541C200EC71DC /* AppDelegate.m */,
 				3E5EC21F17FE58210029F506 /* LoginViewController.h */,
 				3E5EC22017FE58210029F506 /* LoginViewController.m */,
+<<<<<<< HEAD
 				3E16BA9F17F541C200EC71DC /* AppDelegate.m */,
 				3E5EC22F1800CB130029F506 /* APAAdventureScene.h */,
 				3E5EC2301800CB130029F506 /* APAAdventureScene.m */,
@@ -198,20 +213,29 @@
 				3E5EC2371800CB130029F506 /* APAPlayer.h */,
 				3E5EC2381800CB130029F506 /* APAPlayer.m */,
 				3E16BAA417F541C200EC71DC /* ViewController.h */,
+=======
+				3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */,
+				3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */,
+				3E16BAA117F541C200EC71DC /* Main.storyboard */,
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 				3E5EC22517FE64510029F506 /* MainMenuViewController.h */,
 				3E5EC22617FE64510029F506 /* MainMenuViewController.m */,
-				3E16BAA517F541C200EC71DC /* ViewController.m */,
 				3E16BAA717F541C200EC71DC /* MyScene.h */,
 				3E16BAA817F541C200EC71DC /* MyScene.m */,
-				3E5EC1CE17FDDE440029F506 /* HomeScreen.h */,
-				3E5EC1CF17FDDE440029F506 /* HomeScreen.m */,
 				3E4ADD4617FB675700353CF4 /* Characters */,
 				3E4ADD4817FB676500353CF4 /* Practice Modules */,
+<<<<<<< HEAD
 				3E4ADD4917FB677200353CF4 /* Mazez */,
 				3E16BAAA17F541C200EC71DC /* Spaceship.png */,
 				3E16BAAC17F541C300EC71DC /* Images.xcassets */,
 				3E5EC24D1800F4800029F506 /* CCC_running.atlas */,
+=======
+				3E4ADD4917FB677200353CF4 /* Maze Controllers */,
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 				3E16BA9617F541C200EC71DC /* Supporting Files */,
+				5B479E001801380D009A6818 /* LevelOneMaze.h */,
+				5B479E011801380D009A6818 /* LevelOneMaze.m */,
+				5BC218E3180142F2001FC9A1 /* Model */,
 			);
 			path = CCC;
 			sourceTree = "<group>";
@@ -219,6 +243,13 @@
 		3E16BA9617F541C200EC71DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5BC218DE18013F2F001FC9A1 /* Gecko.png */,
+				5BC218DC18013EED001FC9A1 /* Eagle.png */,
+				5B479E0618013A80009A6818 /* HomeIcon.png */,
+				3E16BAAA17F541C200EC71DC /* Spaceship.png */,
+				5B479DFB180131CF009A6818 /* Kangeroo.png */,
+				5B479DF918012FCF009A6818 /* CCCHomepage_iPhone5.png */,
+				5B479DF418012A95009A6818 /* CCCHomepage.png */,
 				3E16BA9717F541C200EC71DC /* CCC-Info.plist */,
 				3E16BA9817F541C200EC71DC /* InfoPlist.strings */,
 				3E16BA9B17F541C200EC71DC /* main.m */,
@@ -248,12 +279,10 @@
 		3E4ADD4617FB675700353CF4 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				3E4ADD4D17FB6E9B00353CF4 /* CCCDefault.h */,
-				3E4ADD4E17FB6E9B00353CF4 /* CCCDefault.m */,
-				3E4ADD3D17FB663500353CF4 /* CCCKangaroo.h */,
-				3E4ADD3E17FB663500353CF4 /* CCCKangaroo.m */,
-				3E4ADD3917FB63F200353CF4 /* CCCPlayer.h */,
-				3E4ADD3A17FB63F200353CF4 /* CCCPlayer.m */,
+				3E4ADD4D17FB6E9B00353CF4 /* Default.h */,
+				3E4ADD4E17FB6E9B00353CF4 /* Default.m */,
+				3E4ADD3917FB63F200353CF4 /* Player.h */,
+				3E4ADD3A17FB63F200353CF4 /* Player.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -261,25 +290,46 @@
 		3E4ADD4817FB676500353CF4 /* Practice Modules */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */,
 				3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */,
 				3E4ADD4017FB669D00353CF4 /* CCCPracticeModuleMenuPage.h */,
 				3E4ADD4117FB669D00353CF4 /* CCCPracticeModuleMenuPage.m */,
 				3E4ADD4317FB674700353CF4 /* CCCKangarooPracticeModule.h */,
 				3E4ADD4417FB674700353CF4 /* CCCKangarooPracticeModule.m */,
+=======
+				5B479DFD18013211009A6818 /* KangarooModuleViewController.h */,
+				5B479DFE18013211009A6818 /* KangarooModuleViewController.m */,
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 			);
 			name = "Practice Modules";
 			sourceTree = "<group>";
 		};
-		3E4ADD4917FB677200353CF4 /* Mazez */ = {
+		3E4ADD4917FB677200353CF4 /* Maze Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B479DF618012EFF009A6818 /* MazeLevelsViewController.h */,
+				5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */,
+				5B479E0318013861009A6818 /* LevelOneMazeViewController.h */,
+				5B479E0418013861009A6818 /* LevelOneMazeViewController.m */,
+			);
+			name = "Maze Controllers";
+			sourceTree = "<group>";
+		};
+		5BC218E3180142F2001FC9A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+<<<<<<< HEAD
 				3E5EC22C1800A01A0029F506 /* mazeViewController.h */,
 				3E5EC22D1800A01A0029F506 /* mazeViewController.m */,
 				3E4ADD3617F9CA9C00353CF4 /* MainMazeScene.h */,
 				3E4ADD3717F9CA9C00353CF4 /* MainMazeScene.m */,
+=======
+				5BC218E0180142EA001FC9A1 /* Obstacle.h */,
+				5BC218E1180142EA001FC9A1 /* Obstacle.m */,
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 			);
-			name = Mazez;
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,13 +408,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */,
+				5B479E0718013A81009A6818 /* HomeIcon.png in Resources */,
+				5BC218DD18013EED001FC9A1 /* Eagle.png in Resources */,
+				5B479DFC180131CF009A6818 /* Kangeroo.png in Resources */,
+				5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */,
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
+<<<<<<< HEAD
 				3E5EC2451800D61C0029F506 /* APAGraphicsUtilities.h in Resources */,
 				3E16BAAD17F541C300EC71DC /* Images.xcassets in Resources */,
 				3E5EC24E1800F4800029F506 /* CCC_running.atlas in Resources */,
+=======
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
 				3E5EC2461800D61C0029F506 /* APAGraphicsUtilities.m in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
+				5BC218DF18013F2F001FC9A1 /* Gecko.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				3E4ADD3817F9CA9C00353CF4 /* MainMazeScene.m in Sources */,
 				3E5EC23D1800CB130029F506 /* APAPlayer.m in Sources */,
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
@@ -402,6 +462,19 @@
 				3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */,
 				3E5EC2391800CB130029F506 /* APAAdventureScene.m in Sources */,
 				3E4ADD3B17FB63F200353CF4 /* CCCPlayer.m in Sources */,
+=======
+				5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */,
+				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
+				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
+				5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */,
+				3E4ADD4F17FB6E9B00353CF4 /* Default.m in Sources */,
+				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
+				5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */,
+				5B479E0518013861009A6818 /* LevelOneMazeViewController.m in Sources */,
+				5B479DFF18013211009A6818 /* KangarooModuleViewController.m in Sources */,
+				3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */,
+				3E4ADD3B17FB63F200353CF4 /* Player.m in Sources */,
+>>>>>>> e24dd050fa42b840ea838f9f7a9dbb04756bb1e8
 				3E16BAA017F541C200EC71DC /* AppDelegate.m in Sources */,
 				3E16BA9C17F541C200EC71DC /* main.m in Sources */,
 			);
