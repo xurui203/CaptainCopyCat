@@ -495,10 +495,6 @@
         <image name="Eagle.png" width="139" height="98"/>
         <image name="Gecko.png" width="156" height="95"/>
         <image name="HomeIcon.png" width="256" height="256"/>
-        <image name="HomeIcon.png" width="256" height="256"/>
-        <image name="HomeIcon.png" width="256" height="256"/>
-        <image name="HomeIcon.png" width="256" height="256"/>
-        <image name="HomeIcon.png" width="256" height="256"/>
         <image name="Kangeroo.png" width="134" height="96"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
