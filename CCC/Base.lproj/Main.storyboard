@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzZ-d6-OOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="-674"/>
+            <point key="canvasLocation" x="295" y="-710"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qcm-GW-Mx2">
@@ -102,6 +102,17 @@
                                     <segue destination="eli-ze-lgj" kind="modal" id="kRM-HF-epL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APZ-sD-YQg">
+                                <rect key="frame" x="46" y="77" width="88" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396937832105" green="0.94919882015306123" blue="0.81430730211017321" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vI0-Ed-55x" kind="modal" id="QXL-bx-AJW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -111,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="po8-i6-dxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="292"/>
+            <point key="canvasLocation" x="690" y="300"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="2ti-OR-vek">
@@ -195,6 +206,17 @@
                                     <segue destination="eli-ze-lgj" kind="modal" id="cfL-oa-zP4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUn-fz-aex">
+                                <rect key="frame" x="40" y="79" width="104" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Kangeroo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4vu-xc-xx5" kind="modal" id="NKD-VO-Ikp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -205,6 +227,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acF-QC-tFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-56" y="292"/>
+        </scene>
+        <!--Kangeroo Module View Controller-->
+        <scene sceneID="maD-9k-ubx">
+            <objects>
+                <viewController id="4vu-xc-xx5" customClass="KangerooModuleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Do0-Y8-cXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="eaN-2b-kAr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wu3-Nl-nar" customClass="KangerooViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LX5-HY-ZfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="809"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sAb-jq-MH0">
@@ -228,6 +270,7 @@
     </scenes>
     <resources>
         <image name="CCCHomepage.png" width="960" height="640"/>
+        <image name="Kangeroo.png" width="134" height="96"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
