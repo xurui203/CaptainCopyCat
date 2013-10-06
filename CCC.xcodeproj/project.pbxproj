@@ -37,6 +37,7 @@
 		5B479E0718013A81009A6818 /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479E0618013A80009A6818 /* HomeIcon.png */; };
 		5BC218DD18013EED001FC9A1 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC218DC18013EED001FC9A1 /* Eagle.png */; };
 		5BC218DF18013F2F001FC9A1 /* Gecko.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC218DE18013F2F001FC9A1 /* Gecko.png */; };
+		5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC218E1180142EA001FC9A1 /* Obstacle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		5B479E0618013A80009A6818 /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
 		5BC218DC18013EED001FC9A1 /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
 		5BC218DE18013F2F001FC9A1 /* Gecko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gecko.png; sourceTree = "<group>"; };
+		5BC218E0180142EA001FC9A1 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = Model/Obstacle.h; sourceTree = "<group>"; };
+		5BC218E1180142EA001FC9A1 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Obstacle.m; path = Model/Obstacle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,7 @@
 				3E16BA9617F541C200EC71DC /* Supporting Files */,
 				5B479E001801380D009A6818 /* LevelOneMaze.h */,
 				5B479E011801380D009A6818 /* LevelOneMaze.m */,
+				5BC218E3180142F2001FC9A1 /* Model */,
 			);
 			path = CCC;
 			sourceTree = "<group>";
@@ -241,6 +245,15 @@
 				5B479E0418013861009A6818 /* LevelOneMazeViewController.m */,
 			);
 			name = "Maze Controllers";
+			sourceTree = "<group>";
+		};
+		5BC218E3180142F2001FC9A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BC218E0180142EA001FC9A1 /* Obstacle.h */,
+				5BC218E1180142EA001FC9A1 /* Obstacle.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +362,7 @@
 				5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */,
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
 				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
+				5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */,
 				3E4ADD4F17FB6E9B00353CF4 /* Default.m in Sources */,
 				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
 				5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */,
