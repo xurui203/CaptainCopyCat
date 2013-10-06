@@ -110,17 +110,39 @@
             </objects>
             <point key="canvasLocation" x="652" y="-198"/>
         </scene>
-        <!--View Controller - Maze Menu-->
+        <!--Maze View Controller - Maze Menu-->
         <scene sceneID="TE3-BG-9jG">
             <objects>
-                <viewController id="j3z-nd-r4w" sceneMemberID="viewController">
+                <viewController id="j3z-nd-r4w" customClass="mazeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKy-J9-tru"/>
                         <viewControllerLayoutGuide type="bottom" id="UCq-GE-n2l"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yiB-cM-dCu">
+                    <view key="view" contentMode="scaleToFill" id="yiB-cM-dCu" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ex8-Qh-QCT">
+                                <rect key="frame" x="118" y="233" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameButton:" destination="j3z-nd-r4w" eventType="touchUpInside" id="egh-yR-PIi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00A-sc-Sfj">
+                                <rect key="frame" x="379" y="233" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resumeButton:" destination="j3z-nd-r4w" eventType="touchUpInside" id="mzI-5N-gGm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>

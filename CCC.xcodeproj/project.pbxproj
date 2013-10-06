@@ -34,6 +34,16 @@
 		3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22017FE58210029F506 /* LoginViewController.m */; };
 		3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */; };
 		3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22617FE64510029F506 /* MainMenuViewController.m */; };
+		3E5EC22E1800A01A0029F506 /* mazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22D1800A01A0029F506 /* mazeViewController.m */; };
+		3E5EC2391800CB130029F506 /* APAAdventureScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2301800CB130029F506 /* APAAdventureScene.m */; };
+		3E5EC23A1800CB130029F506 /* APACave.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2321800CB130029F506 /* APACave.m */; };
+		3E5EC23B1800CB130029F506 /* APACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2341800CB130029F506 /* APACharacter.m */; };
+		3E5EC23C1800CB130029F506 /* APAHeroCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2361800CB130029F506 /* APAHeroCharacter.m */; };
+		3E5EC23D1800CB130029F506 /* APAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC2381800CB130029F506 /* APAPlayer.m */; };
+		3E5EC2451800D61C0029F506 /* APAGraphicsUtilities.h in Resources */ = {isa = PBXBuildFile; fileRef = 3E5EC2431800D61C0029F506 /* APAGraphicsUtilities.h */; };
+		3E5EC2461800D61C0029F506 /* APAGraphicsUtilities.m in Resources */ = {isa = PBXBuildFile; fileRef = 3E5EC2441800D61C0029F506 /* APAGraphicsUtilities.m */; };
+		3E5EC24C1800E2340029F506 /* APAParallaxSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC24B1800E2340029F506 /* APAParallaxSprite.m */; };
+		3E5EC24E1800F4800029F506 /* CCC_running.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3E5EC24D1800F4800029F506 /* CCC_running.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +100,23 @@
 		3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMainViewController.m; sourceTree = "<group>"; };
 		3E5EC22517FE64510029F506 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		3E5EC22617FE64510029F506 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		3E5EC22C1800A01A0029F506 /* mazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mazeViewController.h; sourceTree = "<group>"; };
+		3E5EC22D1800A01A0029F506 /* mazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mazeViewController.m; sourceTree = "<group>"; };
+		3E5EC22F1800CB130029F506 /* APAAdventureScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAAdventureScene.h; path = redamazesofar/APAAdventureScene.h; sourceTree = "<group>"; };
+		3E5EC2301800CB130029F506 /* APAAdventureScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAAdventureScene.m; path = redamazesofar/APAAdventureScene.m; sourceTree = "<group>"; };
+		3E5EC2311800CB130029F506 /* APACave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APACave.h; path = redamazesofar/APACave.h; sourceTree = "<group>"; };
+		3E5EC2321800CB130029F506 /* APACave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APACave.m; path = redamazesofar/APACave.m; sourceTree = "<group>"; };
+		3E5EC2331800CB130029F506 /* APACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APACharacter.h; path = redamazesofar/APACharacter.h; sourceTree = "<group>"; };
+		3E5EC2341800CB130029F506 /* APACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APACharacter.m; path = redamazesofar/APACharacter.m; sourceTree = "<group>"; };
+		3E5EC2351800CB130029F506 /* APAHeroCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAHeroCharacter.h; path = redamazesofar/APAHeroCharacter.h; sourceTree = "<group>"; };
+		3E5EC2361800CB130029F506 /* APAHeroCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAHeroCharacter.m; path = redamazesofar/APAHeroCharacter.m; sourceTree = "<group>"; };
+		3E5EC2371800CB130029F506 /* APAPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAPlayer.h; path = redamazesofar/APAPlayer.h; sourceTree = "<group>"; };
+		3E5EC2381800CB130029F506 /* APAPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAPlayer.m; path = redamazesofar/APAPlayer.m; sourceTree = "<group>"; };
+		3E5EC2431800D61C0029F506 /* APAGraphicsUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = APAGraphicsUtilities.h; path = Utilities/APAGraphicsUtilities.h; sourceTree = "<group>"; };
+		3E5EC2441800D61C0029F506 /* APAGraphicsUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = APAGraphicsUtilities.m; path = Utilities/APAGraphicsUtilities.m; sourceTree = "<group>"; };
+		3E5EC24A1800E2340029F506 /* APAParallaxSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAParallaxSprite.h; sourceTree = "<group>"; };
+		3E5EC24B1800E2340029F506 /* APAParallaxSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAParallaxSprite.m; sourceTree = "<group>"; };
+		3E5EC24D1800F4800029F506 /* CCC_running.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CCC_running.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,13 +178,25 @@
 		3E16BA9517F541C200EC71DC /* CCC */ = {
 			isa = PBXGroup;
 			children = (
+				3E16BAA117F541C200EC71DC /* Main.storyboard */,
+				3E5EC24A1800E2340029F506 /* APAParallaxSprite.h */,
+				3E5EC24B1800E2340029F506 /* APAParallaxSprite.m */,
 				3E16BA9E17F541C200EC71DC /* AppDelegate.h */,
 				3E5EC21F17FE58210029F506 /* LoginViewController.h */,
 				3E5EC22017FE58210029F506 /* LoginViewController.m */,
-				3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */,
-				3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */,
 				3E16BA9F17F541C200EC71DC /* AppDelegate.m */,
-				3E16BAA117F541C200EC71DC /* Main.storyboard */,
+				3E5EC22F1800CB130029F506 /* APAAdventureScene.h */,
+				3E5EC2301800CB130029F506 /* APAAdventureScene.m */,
+				3E5EC2431800D61C0029F506 /* APAGraphicsUtilities.h */,
+				3E5EC2441800D61C0029F506 /* APAGraphicsUtilities.m */,
+				3E5EC2311800CB130029F506 /* APACave.h */,
+				3E5EC2321800CB130029F506 /* APACave.m */,
+				3E5EC2331800CB130029F506 /* APACharacter.h */,
+				3E5EC2341800CB130029F506 /* APACharacter.m */,
+				3E5EC2351800CB130029F506 /* APAHeroCharacter.h */,
+				3E5EC2361800CB130029F506 /* APAHeroCharacter.m */,
+				3E5EC2371800CB130029F506 /* APAPlayer.h */,
+				3E5EC2381800CB130029F506 /* APAPlayer.m */,
 				3E16BAA417F541C200EC71DC /* ViewController.h */,
 				3E5EC22517FE64510029F506 /* MainMenuViewController.h */,
 				3E5EC22617FE64510029F506 /* MainMenuViewController.m */,
@@ -171,6 +210,7 @@
 				3E4ADD4917FB677200353CF4 /* Mazez */,
 				3E16BAAA17F541C200EC71DC /* Spaceship.png */,
 				3E16BAAC17F541C300EC71DC /* Images.xcassets */,
+				3E5EC24D1800F4800029F506 /* CCC_running.atlas */,
 				3E16BA9617F541C200EC71DC /* Supporting Files */,
 			);
 			path = CCC;
@@ -221,6 +261,8 @@
 		3E4ADD4817FB676500353CF4 /* Practice Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */,
+				3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */,
 				3E4ADD4017FB669D00353CF4 /* CCCPracticeModuleMenuPage.h */,
 				3E4ADD4117FB669D00353CF4 /* CCCPracticeModuleMenuPage.m */,
 				3E4ADD4317FB674700353CF4 /* CCCKangarooPracticeModule.h */,
@@ -232,6 +274,8 @@
 		3E4ADD4917FB677200353CF4 /* Mazez */ = {
 			isa = PBXGroup;
 			children = (
+				3E5EC22C1800A01A0029F506 /* mazeViewController.h */,
+				3E5EC22D1800A01A0029F506 /* mazeViewController.m */,
 				3E4ADD3617F9CA9C00353CF4 /* MainMazeScene.h */,
 				3E4ADD3717F9CA9C00353CF4 /* MainMazeScene.m */,
 			);
@@ -315,8 +359,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
+				3E5EC2451800D61C0029F506 /* APAGraphicsUtilities.h in Resources */,
 				3E16BAAD17F541C300EC71DC /* Images.xcassets in Resources */,
+				3E5EC24E1800F4800029F506 /* CCC_running.atlas in Resources */,
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
+				3E5EC2461800D61C0029F506 /* APAGraphicsUtilities.m in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,16 +384,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E4ADD3817F9CA9C00353CF4 /* MainMazeScene.m in Sources */,
+				3E5EC23D1800CB130029F506 /* APAPlayer.m in Sources */,
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
 				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
 				3E4ADD4217FB669D00353CF4 /* CCCPracticeModuleMenuPage.m in Sources */,
 				3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */,
+				3E5EC23A1800CB130029F506 /* APACave.m in Sources */,
 				3E5EC1D017FDDE440029F506 /* HomeScreen.m in Sources */,
 				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
 				3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */,
 				3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */,
+				3E5EC23B1800CB130029F506 /* APACharacter.m in Sources */,
 				3E16BAA617F541C200EC71DC /* ViewController.m in Sources */,
+				3E5EC22E1800A01A0029F506 /* mazeViewController.m in Sources */,
+				3E5EC23C1800CB130029F506 /* APAHeroCharacter.m in Sources */,
+				3E5EC24C1800E2340029F506 /* APAParallaxSprite.m in Sources */,
 				3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */,
+				3E5EC2391800CB130029F506 /* APAAdventureScene.m in Sources */,
 				3E4ADD3B17FB63F200353CF4 /* CCCPlayer.m in Sources */,
 				3E16BAA017F541C200EC71DC /* AppDelegate.m in Sources */,
 				3E16BA9C17F541C200EC71DC /* main.m in Sources */,
