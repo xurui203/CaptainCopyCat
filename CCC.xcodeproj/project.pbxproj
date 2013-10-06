@@ -34,6 +34,8 @@
 		3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22017FE58210029F506 /* LoginViewController.m */; };
 		3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */; };
 		3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22617FE64510029F506 /* MainMenuViewController.m */; };
+		5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF418012A95009A6818 /* CCCHomepage.png */; };
+		5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,9 @@
 		3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMainViewController.m; sourceTree = "<group>"; };
 		3E5EC22517FE64510029F506 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		3E5EC22617FE64510029F506 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		5B479DF418012A95009A6818 /* CCCHomepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CCCHomepage.png; sourceTree = "<group>"; };
+		5B479DF618012EFF009A6818 /* MazeLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeLevelsViewController.h; sourceTree = "<group>"; };
+		5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeLevelsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +177,8 @@
 				3E16BAAA17F541C200EC71DC /* Spaceship.png */,
 				3E16BAAC17F541C300EC71DC /* Images.xcassets */,
 				3E16BA9617F541C200EC71DC /* Supporting Files */,
+				5B479DF618012EFF009A6818 /* MazeLevelsViewController.h */,
+				5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */,
 			);
 			path = CCC;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 		3E16BA9617F541C200EC71DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B479DF418012A95009A6818 /* CCCHomepage.png */,
 				3E16BA9717F541C200EC71DC /* CCC-Info.plist */,
 				3E16BA9817F541C200EC71DC /* InfoPlist.strings */,
 				3E16BA9B17F541C200EC71DC /* main.m */,
@@ -314,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */,
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
 				3E16BAAD17F541C300EC71DC /* Images.xcassets in Resources */,
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
@@ -343,6 +352,7 @@
 				3E4ADD4F17FB6E9B00353CF4 /* CCCDefault.m in Sources */,
 				3E5EC1D017FDDE440029F506 /* HomeScreen.m in Sources */,
 				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
+				5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */,
 				3E4ADD4517FB674700353CF4 /* CCCKangarooPracticeModule.m in Sources */,
 				3E4ADD3F17FB663500353CF4 /* CCCKangaroo.m in Sources */,
 				3E16BAA617F541C200EC71DC /* ViewController.m in Sources */,
