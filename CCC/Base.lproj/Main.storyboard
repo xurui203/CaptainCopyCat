@@ -127,7 +127,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APZ-sD-YQg">
                                 <rect key="frame" x="46" y="77" width="88" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94662396937832105" green="0.94919882015306123" blue="0.81430730211017321" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.79250582908573075" blue="0.51822844570618032" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Level 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -146,8 +146,48 @@
                                     <segue destination="eli-ze-lgj" kind="modal" id="NvF-w1-9lr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-gf-2GL">
+                                <rect key="frame" x="182" y="77" width="88" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tY6-62-tn8">
+                                <rect key="frame" x="317" y="77" width="88" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level 3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4r-fH-pgm">
+                                <rect key="frame" x="46" y="177" width="88" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level 4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-dC-P2c">
+                                <rect key="frame" x="182" y="177" width="88" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level 5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFh-sM-sE1">
+                                <rect key="frame" x="317" y="177" width="88" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level 6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.79078471025599595" green="1" blue="0.75762669554778972" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Maze Menu" id="bPu-Cl-gTm"/>
@@ -241,7 +281,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUn-fz-aex">
-                                <rect key="frame" x="40" y="79" width="104" height="77"/>
+                                <rect key="frame" x="40" y="101" width="104" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="Kangeroo.png">
@@ -251,8 +291,24 @@
                                     <segue destination="4vu-xc-xx5" kind="modal" id="NKD-VO-Ikp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX3-C8-X9W">
+                                <rect key="frame" x="183" y="101" width="104" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Gecko.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owg-ib-35n">
+                                <rect key="frame" x="326" y="101" width="104" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94662396940000004" green="0.94919882020000002" blue="0.81430730210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Eagle.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.7932082228314713" green="0.98731710041323695" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Learning Modules" id="nHb-ch-aHa"/>
@@ -336,6 +392,8 @@
     </scenes>
     <resources>
         <image name="CCCHomepage.png" width="960" height="640"/>
+        <image name="Eagle.png" width="139" height="98"/>
+        <image name="Gecko.png" width="156" height="95"/>
         <image name="HomeIcon.png" width="256" height="256"/>
         <image name="HomeIcon.png" width="256" height="256"/>
         <image name="HomeIcon.png" width="256" height="256"/>
@@ -349,7 +407,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="d8y-fA-bBJ"/>
-        <segue reference="GCT-6h-iNU"/>
         <segue reference="fh0-Jh-Rdq"/>
+        <segue reference="nNj-AB-p1V"/>
     </inferredMetricsTieBreakers>
 </document>
