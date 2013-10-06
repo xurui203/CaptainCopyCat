@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dqe-e3-OFu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMt-Je-ZQB">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7k-4n-F3C">
@@ -60,16 +60,16 @@
             </objects>
             <point key="canvasLocation" x="295" y="-710"/>
         </scene>
-        <!--View Controller-->
+        <!--Level One Maze View Controller-->
         <scene sceneID="qcm-GW-Mx2">
             <objects>
-                <viewController id="vI0-Ed-55x" sceneMemberID="viewController">
+                <viewController id="vI0-Ed-55x" customClass="LevelOneMazeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g4y-1D-kcT"/>
                         <viewControllerLayoutGuide type="bottom" id="n65-6Q-cRf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nNn-ni-tq5">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -89,7 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UCq-GE-n2l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yiB-cM-dCu">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvA-yR-4Uz">
@@ -133,11 +133,11 @@
                         <viewControllerLayoutGuide type="bottom" id="bid-mR-eqE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Mm-BF-svA">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CCCHomepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-Ax-VTP">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-Hm-E4x">
@@ -193,7 +193,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Bem-lP-4os"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w28-QA-Z0v">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-Eh-cO3">
@@ -228,16 +228,16 @@
             </objects>
             <point key="canvasLocation" x="-56" y="292"/>
         </scene>
-        <!--Kangeroo Module View Controller-->
+        <!--Kangaroo Module View Controller-->
         <scene sceneID="maD-9k-ubx">
             <objects>
-                <viewController id="4vu-xc-xx5" customClass="KangerooModuleViewController" sceneMemberID="viewController">
+                <viewController id="4vu-xc-xx5" customClass="KangarooModuleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Do0-Y8-cXI"/>
                         <viewControllerLayoutGuide type="bottom" id="eaN-2b-kAr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wu3-Nl-nar" customClass="KangerooViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -275,7 +275,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="kRM-HF-epL"/>

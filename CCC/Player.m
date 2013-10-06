@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
-#import "CCCPlayer.h"
+#import "Player.h"
 
-@implementation CCCPlayer
+@implementation Player
 
 @end

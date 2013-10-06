@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
-#import "CCCDefault.h"
+#import "Default.h"
 
 @implementation CCCDefault
 

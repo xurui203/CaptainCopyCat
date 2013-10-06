@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface CCCPlayer : SKSpriteNode
+@interface Player : SKSpriteNode
 
 @end

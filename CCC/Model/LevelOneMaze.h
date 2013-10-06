@@ -1,13 +1,13 @@
 //
-//  KangerooViewController.h
+//  LevelOneMaze.h
 //  CCC
 //
 //  Created by Xu Rui on 6/10/13.
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface KangerooViewController : UIViewController
+@interface LevelOneMaze : SKScene
 
 @end
