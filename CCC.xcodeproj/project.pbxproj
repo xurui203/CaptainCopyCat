@@ -30,7 +30,6 @@
 		3EF5B7AE18020EC0003679D9 /* Captain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AD18020EC0003679D9 /* Captain.m */; };
 		3EF5B7B0180257C5003679D9 /* Captain_idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AF180257C5003679D9 /* Captain_idle.atlas */; };
 		3EF5B7B218025D0B003679D9 /* ccc_008.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5B7B118025D0B003679D9 /* ccc_008.png */; };
-		3EF5B7B81802A2B7003679D9 /* SuperpowerDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5B7B71802A2B7003679D9 /* SuperpowerDrawer.m */; };
 		5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF418012A95009A6818 /* CCCHomepage.png */; };
 		5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */; };
 		5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF918012FCF009A6818 /* CCCHomepage_iPhone5.png */; };
@@ -87,8 +86,6 @@
 		3EF5B7AD18020EC0003679D9 /* Captain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Captain.m; path = ../Captain.m; sourceTree = "<group>"; };
 		3EF5B7AF180257C5003679D9 /* Captain_idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Captain_idle.atlas; sourceTree = "<group>"; };
 		3EF5B7B118025D0B003679D9 /* ccc_008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccc_008.png; path = Captain_idle.atlas/ccc_008.png; sourceTree = "<group>"; };
-		3EF5B7B61802A2B7003679D9 /* SuperpowerDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperpowerDrawer.h; sourceTree = "<group>"; };
-		3EF5B7B71802A2B7003679D9 /* SuperpowerDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperpowerDrawer.m; sourceTree = "<group>"; };
 		5B479DF418012A95009A6818 /* CCCHomepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CCCHomepage.png; sourceTree = "<group>"; };
 		5B479DF618012EFF009A6818 /* MazeLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeLevelsViewController.h; sourceTree = "<group>"; };
 		5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeLevelsViewController.m; sourceTree = "<group>"; };
@@ -174,8 +171,6 @@
 				3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */,
 				3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */,
 				3E16BAA117F541C200EC71DC /* Main.storyboard */,
-				3EF5B7B61802A2B7003679D9 /* SuperpowerDrawer.h */,
-				3EF5B7B71802A2B7003679D9 /* SuperpowerDrawer.m */,
 				3E5EC22517FE64510029F506 /* MainMenuViewController.h */,
 				3E5EC22617FE64510029F506 /* MainMenuViewController.m */,
 				3E4ADD4617FB675700353CF4 /* Characters */,
@@ -386,7 +381,6 @@
 				5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */,
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
 				3EF5B7A81801FD06003679D9 /* LevelOneMazeScene.m in Sources */,
-				3EF5B7B81802A2B7003679D9 /* SuperpowerDrawer.m in Sources */,
 				3EF5B7AE18020EC0003679D9 /* Captain.m in Sources */,
 				5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */,
 				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
