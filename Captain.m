@@ -28,7 +28,7 @@
     SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008"];
     captain.position = CGPointMake(CGRectGetMidX(self.frame) + 100,
                                    CGRectGetMidY(self.frame) + 450);
-    captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:captain.size];
+    captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100, 1)];
     captain.name = @"captain";
 //    captain.zPosition = 100;
     NSLog(@"createdcaptain");

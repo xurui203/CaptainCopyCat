@@ -46,11 +46,8 @@
 //        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
 //        background.name = @"background";
         
-        SKSpriteNode *groundSprite = [self makeGround];
-        groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) - 150, CGRectGetMidY(self.frame) - 300);
-        groundSprite.name = @"ground1";
-        groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
-        groundSprite.physicsBody.dynamic = NO;
+        SKSpriteNode *ground1Sprite = [self makeGround1];
+        SKSpriteNode *ground2Sprite = [self makeGround2];
         
         NSMutableArray *walkFrames = [NSMutableArray array];
         SKTextureAtlas *walkAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
@@ -62,7 +59,8 @@
         }
         self.walkAnimation = walkFrames;
 //        [self addChild:background];
-        [self addChild:groundSprite];
+        [self addChild:ground1Sprite];
+        [self addChild:ground2Sprite];
         
         
     }
@@ -86,10 +84,24 @@
 
 
 
--(SKSpriteNode *)makeGround
+-(SKSpriteNode *)makeGround1
 {
-    SKSpriteNode * ground = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(500, 200)];
-    return ground;
+    SKSpriteNode * groundSprite = [[SKSpriteNode alloc] initWithColor:[SKColor brownColor] size:CGSizeMake(300, 10)];
+    groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) - 150, CGRectGetMidY(self.frame) - 100);
+    groundSprite.name = @"ground1";
+    groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+    groundSprite.physicsBody.dynamic = NO;
+    return groundSprite;
+}
+
+-(SKSpriteNode *)makeGround2
+{
+    SKSpriteNode * groundSprite = [[SKSpriteNode alloc] initWithColor:[SKColor brownColor] size:CGSizeMake(150, 10)];
+    groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) + 200, CGRectGetMidY(self.frame) - 100);
+    groundSprite.name = @"ground1";
+    groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+    groundSprite.physicsBody.dynamic = NO;
+    return groundSprite;
 }
 
 + (void)loadSceneAssets {
