@@ -50,13 +50,13 @@
         SKSpriteNode *ground2Sprite = [self makeGround2];
         
         NSMutableArray *walkFrames = [NSMutableArray array];
-        SKTextureAtlas *walkAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+        //SKTextureAtlas *walkAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
         
-        for(int i =1; i<=walkAtlas.textureNames.count; ++i) {
-            NSString *texture = [NSString stringWithFormat:@"ccc_%03d",i];
+        //for(int i =1; i<=walkAtlas.textureNames.count; ++i) {
+           // NSString *texture = [NSString stringWithFormat:@"ccc_%03d",i];
             
-            [walkFrames addObject:[walkAtlas textureNamed:texture]];
-        }
+//            [walkFrames addObject:[walkAtlas textureNamed:texture]];
+        //}
         self.walkAnimation = walkFrames;
 //        [self addChild:background];
         [self addChild:ground1Sprite];
@@ -72,14 +72,37 @@
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
+    //CGPoint location = [self.captain position];
+    SKSpriteNode *captainCC = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
+    captainCC.position = CGPointMake(20,110);
+    captainCC.zPosition=1;
+    captainCC.scale = 0.1;
+    SKAction *action = [SKAction moveToX:self.frame.size.height-100 duration:2];
+    SKAction *remove = [SKAction removeFromParent];
+    [captainCC runAction:[SKAction sequence:@[action,remove]]];
+    [self addChild:captainCC];
     
-    if (self.captain != nil)
-    {
-        SKAction *animate = [SKAction
-                             animateWithTextures:self.walkAnimation
-                             timePerFrame: 0.05];
-        [self.captain runAction:animate];
-    }
+//    if (self.captain != nil)
+//    {
+//        SKAction *animate = [SKAction
+//                             animateWithTextures:self.walkAnimation
+//                             timePerFrame: 0.05];
+//        [self.captain runAction:animate];
+//    }
+//    
+//    -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//        /* Called when a touch begins */
+//        CGPoint location = [_plane position];
+//        SKSpriteNode *bullet = [SKSpriteNode spriteNodeWithImageNamed:@"B 2.png"];
+//        bullet.position = CGPointMake(location.x,location.y+_plane.size.height/2);
+//        //bullet.position = location;
+//        bullet.zPosition = 1;
+//        bullet.scale = 0.8;
+//        SKAction *action = [SKAction moveToY:self.frame.size.height+bullet.size.height duration:2];
+//        SKAction *remove = [SKAction removeFromParent];
+//        [bullet runAction:[SKAction sequence:@[action,remove]]];
+//        [self addChild:bullet];
+//    }
 }
 
 
@@ -117,7 +140,7 @@
 -(void)showCaptain {
           self.captain = [[Captain alloc]init];
 //            captain.alpha= 1.0f;
-        [self addChild:[self.captain createCaptain]];
+        //[self addChild:[self.captain createCaptain]];
     
 
 }
