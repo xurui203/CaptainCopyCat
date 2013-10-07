@@ -8,16 +8,18 @@
 
 #import "LevelOneMazeViewController.h"
 #import "LevelOneMazeScene.h"
-
+#import "Captain.h"
 
 @interface LevelOneMazeViewController ()
 @property (weak, nonatomic) IBOutlet SKView *skView;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UITextView *levelDescription;
-@property (nonatomic) LevelOneMazeScene *levelOneScene;
+@property (nonatomic, readwrite) LevelOneMazeScene *levelOneScene;
 - (IBAction)playLevelButton:(id)sender;
 
 @property (weak, nonatomic) IBOutlet SKView *SuperpowerDrawer;
+@property (weak, nonatomic) IBOutlet UIButton *moveLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *moveRightButton;
 
 - (IBAction)superpowerDrawerButton:(id)sender;
 
@@ -37,7 +39,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.moveLeftButton setHidden:YES];
+    [self.moveRightButton setHidden:YES];
+
 	// Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,6 +89,13 @@ self.skView.showsNodeCount = YES;
     }
 
 }
+- (IBAction)moveRightButton:(id)sender {
+    [self.levelOneScene moveRight];
+ }
+
+- (IBAction)moveLeftButton:(id)sender {
+    [self.levelOneScene moveLeft];
+}
 
 - (void)hideSuperPowerDrawer:(BOOL)shouldHide animated:(BOOL)shouldAnimate {
     CGFloat alpha = shouldHide ? 0.0f : 1.0f;
@@ -102,7 +113,8 @@ self.skView.showsNodeCount = YES;
 - (IBAction)playLevelButton:(id)sender {
     [self hideUIOptions:YES animated:YES];
     [self.levelOneScene startLevel];
-    
+    [self.moveLeftButton setHidden:NO];
+    [self.moveRightButton setHidden:NO];
 }
 
 - (IBAction)superpowerDrawerButton:(id)sender {
