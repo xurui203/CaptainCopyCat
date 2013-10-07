@@ -16,7 +16,10 @@
 @property (weak, nonatomic) IBOutlet UITextView *levelDescription;
 @property (nonatomic) LevelOneMazeScene *levelOneScene;
 - (IBAction)playLevelButton:(id)sender;
-@property (weak, nonatomic) IBOutlet SKView *navigationDrawer;
+
+@property (weak, nonatomic) IBOutlet SKView *SuperpowerDrawer;
+
+- (IBAction)superpowerDrawerButton:(id)sender;
 
 @end
 
@@ -82,12 +85,28 @@ self.skView.showsNodeCount = YES;
 
 }
 
+- (void)showSuperPowerDrawer:(BOOL)shouldShow animated:(BOOL)shouldAnimate {
+    CGFloat alpha = shouldShow ? 1.0f : 0.0f;
+    
+    if (shouldAnimate) {
+        [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.SuperpowerDrawer.alpha = alpha;
+        } completion:NULL];
+    } else {
+        [self.SuperpowerDrawer setAlpha:alpha];
+    }
+}
+
 
 - (IBAction)playLevelButton:(id)sender {
     [self hideUIOptions:YES animated:YES];
     [self.levelOneScene startLevel];
- 
+    
 }
 
+- (IBAction)superpowerDrawerButton:(id)sender {
+    
+    
+}
 
 @end
