@@ -74,10 +74,10 @@
     
     //CGPoint location = [self.captain position];
     SKSpriteNode *captainCC = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
-    captainCC.position = CGPointMake(20,110);
+    captainCC.position = CGPointMake(20,130);
     captainCC.zPosition=1;
-    captainCC.scale = 0.1;
-    SKAction *action = [SKAction moveToX:self.frame.size.height-100 duration:2];
+    captainCC.scale = 0.5;
+    SKAction *action = [SKAction moveToX:self.frame.size.height-100 duration:3];
     SKAction *remove = [SKAction removeFromParent];
     [captainCC runAction:[SKAction sequence:@[action,remove]]];
     [self addChild:captainCC];
