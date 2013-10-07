@@ -11,7 +11,8 @@
 
 @interface LevelOneMazeScene ()
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
-
+@property BOOL sceneCreated;
+@property NSArray *walkAnimation;
 @property (nonatomic,readwrite) Captain *captain;
 @end
 
@@ -50,6 +51,16 @@
         groundSprite.name = @"ground1";
         groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
         groundSprite.physicsBody.dynamic = NO;
+        
+        NSMutableArray *walkFrames = [NSMutableArray array];
+        SKTextureAtlas *walkAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+        
+        for(int i =1; i<=walkAtlas.textureNames.count; ++i) {
+            NSString *texture = [NSString stringWithFormat:@"ccc_%03d",i];
+            
+            [walkFrames addObject:[walkAtlas textureNamed:texture]];
+        }
+        self.walkAnimation = walkFrames;
 //        [self addChild:background];
         [self addChild:groundSprite];
         
@@ -57,6 +68,23 @@
     }
     return self;
 }
+
+
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    
+    if (self.captain != nil)
+    {
+        SKAction *animate = [SKAction
+                             animateWithTextures:self.walkAnimation
+                             timePerFrame: 0.05];
+        [self.captain runAction:animate];
+    }
+}
+
+
 
 -(SKSpriteNode *)makeGround
 {
@@ -75,9 +103,9 @@
 
 }
 -(void)showCaptain {
-          Captain *captain = [[Captain alloc]init];
+          self.captain = [[Captain alloc]init];
 //            captain.alpha= 1.0f;
-        [self addChild:[captain createCaptain]];
+        [self addChild:[self.captain createCaptain]];
     
 
 }
@@ -86,6 +114,9 @@
     [self performSelector:@selector(showCaptain) withObject:Nil afterDelay:2.0];
 
 }
+
+
+
 #pragma mark - Loop Update
 //- (void)update:(NSTimeInterval)currentTime {
 //    // Handle time delta.
@@ -124,25 +155,25 @@
 //    
 //}
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    
-}
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    
+//}
 
 
 
-- (void)update:(NSTimeInterval)currentTime {
-    // Handle time delta.
-    // If we drop below 60fps, we still want everything to move the same distance.
-    CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
-    self.lastUpdateTimeInterval = currentTime;
-    if (timeSinceLast > 1) { // more than a second since last update
-        timeSinceLast = 1.0 / 60.0;
-        self.lastUpdateTimeInterval = currentTime;
-    }
-    
-//    [self updateWithTimeSinceLastUpdate:timeSinceLast];
-    
-}
+//- (void)update:(NSTimeInterval)currentTime {
+//    // Handle time delta.
+//    // If we drop below 60fps, we still want everything to move the same distance.
+//    CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
+//    self.lastUpdateTimeInterval = currentTime;
+//    if (timeSinceLast > 1) { // more than a second since last update
+//        timeSinceLast = 1.0 / 60.0;
+//        self.lastUpdateTimeInterval = currentTime;
+//    }
+//    
+////    [self updateWithTimeSinceLastUpdate:timeSinceLast];
+//    
+//}
 
 @end
