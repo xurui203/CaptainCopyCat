@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *levelDescription;
 @property (nonatomic) LevelOneMazeScene *levelOneScene;
 - (IBAction)playLevelButton:(id)sender;
+@property (weak, nonatomic) IBOutlet SKView *navigationDrawer;
 
 @end
 
