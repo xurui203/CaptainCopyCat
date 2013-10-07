@@ -28,17 +28,25 @@
     });
 }
 
+
+
+
 + (void)loadSceneAssets {
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"Environment"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"practiceMazeMap"];
     
     // Load archived emitters and create copyable sprites.
 
     // load background image
     
     // Load assets for all the sprites within this scene.
-    [Captain loadSharedAssets];
-    [Obstacle loadSharedAssets];
 
+
+}
+
+
+
+-(void)startLevel {
+    SKVideoNode* captain = [[SKVideoNode alloc]init];
 }
 
 @end

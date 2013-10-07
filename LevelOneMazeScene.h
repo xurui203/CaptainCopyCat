@@ -12,7 +12,7 @@
 typedef void (^APAAssetLoadCompletionHandler)(void);
 
 /* Preload shared animation frames, emitters, etc. */
-+ (void)loadSharedAssets;
+//+ (void)loadSharedAssets;
 
 
 - (void)startLevel;

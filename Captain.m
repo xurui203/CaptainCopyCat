@@ -15,24 +15,19 @@
 }
 
 #pragma mark - Initialization
-- (id)initAtPosition:(CGPoint)position withPlayer:(Captain *)Captain {
-    return [self initWithTexture:nil atPosition:position withPlayer:Captain];
-}
-
-- (id)initWithTexture:(SKTexture *)texture atPosition:(CGPoint)position withPlayer:(Captain *)Captain {
-    self = [self initWithTexture:texture atPosition:position];
-    if (self) {
-        _Captain = Captain;
-        
-        // Rotate by PI radians (180 degrees) so hero faces down rather than toward wall at start of game.
-        self.zRotation = M_PI;
-        self.zPosition = -0.25;
-        self.name = [NSString stringWithFormat:@"Hero"];
-    }
+- (void)initialize {
     
-    return self;
 }
 
+-(SKSpriteNode*) createCaptain {
+    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"Captain_idle"];
+    captain.position = CGPointMake(CGRectGetMidX(self.frame),
+                                   CGRectGetMidY(self.frame)-150);
+    captain.name = @"captain";
+    [self addChild:captain];
+    
+    return captain;
+}
 
 - (NSArray *)idleAnimationFrames {
     return nil;
