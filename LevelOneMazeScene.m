@@ -34,23 +34,12 @@
         background.name = @"background";
         [self addChild:background];
         
-        Captain *captain = [[Captain alloc]init];
-        
-        [self addChild:[captain createCaptain]];
-        
     }
     return self;
 }
 
-//
-//-(SKSpriteNode*) createCaptain {
-//    Captain *captain = [Captain spriteNodeWithImageNamed:@"ccc_008"];
-//    captain.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-//    
-//    
-//}
+
 + (void)loadSceneAssets {
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"practiceMazeMap"];
     
     // Load archived emitters and create copyable sprites.
 
@@ -60,14 +49,16 @@
 
 
 }
+-(void)showCaptain {
+          Captain *captain = [[Captain alloc]init];
+              captain.alpha= 1.0f;
+        [self addChild:[captain createCaptain]];
+    
 
-
+}
 
 -(void)startLevel {
-//    
-//    Captain* captain = [[Captain alloc]init];
-//    [captain createCaptain];
-//    [captain initialize];
+    [self performSelector:@selector(showCaptain) withObject:Nil afterDelay:2.0];
 
 }
 
