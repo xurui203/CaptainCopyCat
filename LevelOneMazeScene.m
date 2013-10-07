@@ -8,7 +8,19 @@
 
 #import "LevelOneMazeScene.h"
 #import "Captain.h"
+
+@interface LevelOneMazeScene ()
+//@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
+
+@property (nonatomic,readwrite) Captain *captain;
+@end
+
+
 @implementation LevelOneMazeScene
+{
+    NSTimeInterval _currentTime;
+
+}
 
 
 #pragma mark - Shared Assets
@@ -60,6 +72,64 @@
 -(void)startLevel {
     [self performSelector:@selector(showCaptain) withObject:Nil afterDelay:2.0];
 
+}
+#pragma mark - Loop Update
+//- (void)update:(NSTimeInterval)currentTime {
+//    // Handle time delta.
+//    // If we drop below 60fps, we still want everything to move the same distance.
+//    CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
+//    self.lastUpdateTimeInterval = currentTime;
+//    if (timeSinceLast > 1) { // more than a second since last update
+//        timeSinceLast = kMinTimeInterval;
+//        self.lastUpdateTimeInterval = currentTime;
+////        self.worldMovedForUpdate = YES;
+//    }
+//    
+//    [self updateWithTimeSinceLastUpdate:timeSinceLast];
+//    
+//        // heroMoveDirection is used by game controllers.
+//        CGPoint captainMoveDirection = player.heroMoveDirection;
+//        if (hypotf(captainMoveDirection.x, captainMoveDirection.y) > 0.0f) {
+//            [self.captain moveInDirection:captainMoveDirection withTimeInterval:timeSinceLast];
+//        }
+//        else {
+//            
+//            if (self.captain.moveLeft) {
+//                [self.captain move:CCCMoveDirectionLeft withTimeInterval:timeSinceLast];
+//            } else if (self.captain.moveRight) {
+//                [self.captain move:CCCMoveDirectionRight withTimeInterval:timeSinceLast];
+//            }
+//        }
+//
+//    }
+//
+//
+//
+//#pragma mark - Loop Update
+//- (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
+//    [self.captain updateWithTimeSinceLastUpdate:timeSinceLast];
+//    
+//}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
+
+
+- (void)update:(NSTimeInterval)currentTime {
+    // Handle time delta.
+    // If we drop below 60fps, we still want everything to move the same distance.
+    CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
+    self.lastUpdateTimeInterval = currentTime;
+    if (timeSinceLast > 1) { // more than a second since last update
+        timeSinceLast = 1.0 / 60.0;
+        self.lastUpdateTimeInterval = currentTime;
+    }
+    
+//    [self updateWithTimeSinceLastUpdate:timeSinceLast];
+    
 }
 
 @end

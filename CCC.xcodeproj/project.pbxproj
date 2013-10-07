@@ -15,7 +15,6 @@
 		3E16BA9C17F541C200EC71DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BA9B17F541C200EC71DC /* main.m */; };
 		3E16BAA017F541C200EC71DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BA9F17F541C200EC71DC /* AppDelegate.m */; };
 		3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAA117F541C200EC71DC /* Main.storyboard */; };
-		3E16BAA917F541C200EC71DC /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BAA817F541C200EC71DC /* MyScene.m */; };
 		3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BAAA17F541C200EC71DC /* Spaceship.png */; };
 		3E16BAB417F541C300EC71DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BAB317F541C300EC71DC /* XCTest.framework */; };
 		3E16BAB517F541C300EC71DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA8D17F541C200EC71DC /* Foundation.framework */; };
@@ -67,8 +66,6 @@
 		3E16BA9E17F541C200EC71DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E16BA9F17F541C200EC71DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E16BAA217F541C200EC71DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3E16BAA717F541C200EC71DC /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		3E16BAA817F541C200EC71DC /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		3E16BAAA17F541C200EC71DC /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		3E16BAB217F541C300EC71DC /* CCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E16BAB317F541C300EC71DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -176,8 +173,6 @@
 				3E16BAA117F541C200EC71DC /* Main.storyboard */,
 				3E5EC22517FE64510029F506 /* MainMenuViewController.h */,
 				3E5EC22617FE64510029F506 /* MainMenuViewController.m */,
-				3E16BAA717F541C200EC71DC /* MyScene.h */,
-				3E16BAA817F541C200EC71DC /* MyScene.m */,
 				3E4ADD4617FB675700353CF4 /* Characters */,
 				3E4ADD4817FB676500353CF4 /* Practice Modules */,
 				3E4ADD4917FB677200353CF4 /* Maze Controllers */,
@@ -386,7 +381,6 @@
 				5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */,
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
 				3EF5B7A81801FD06003679D9 /* LevelOneMazeScene.m in Sources */,
-				3E16BAA917F541C200EC71DC /* MyScene.m in Sources */,
 				3EF5B7AE18020EC0003679D9 /* Captain.m in Sources */,
 				5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */,
 				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
