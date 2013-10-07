@@ -7,7 +7,7 @@
 //
 
 #import "LevelOneMazeScene.h"
-
+#import "Captain.h"
 @implementation LevelOneMazeScene
 
 
@@ -27,10 +27,28 @@
         });
     });
 }
+-(id)initWithSize:(CGSize)size {
+    if (self = [super initWithSize:size]) {
+        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
+        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        background.name = @"background";
+        [self addChild:background];
+        
+        Captain *captain = [[Captain alloc]init];
+        
+        [self addChild:[captain createCaptain]];
+        
+    }
+    return self;
+}
 
-
-
-
+//
+//-(SKSpriteNode*) createCaptain {
+//    Captain *captain = [Captain spriteNodeWithImageNamed:@"ccc_008"];
+//    captain.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+//    
+//    
+//}
 + (void)loadSceneAssets {
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"practiceMazeMap"];
     
@@ -46,7 +64,11 @@
 
 
 -(void)startLevel {
-    SKVideoNode* captain = [[SKVideoNode alloc]init];
+//    
+//    Captain* captain = [[Captain alloc]init];
+//    [captain createCaptain];
+//    [captain initialize];
+
 }
 
 @end

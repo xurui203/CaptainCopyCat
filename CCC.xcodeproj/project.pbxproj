@@ -30,6 +30,7 @@
 		3EF5B7AB18020772003679D9 /* practiceMazeMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AA18020772003679D9 /* practiceMazeMap.png */; };
 		3EF5B7AE18020EC0003679D9 /* Captain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AD18020EC0003679D9 /* Captain.m */; };
 		3EF5B7B0180257C5003679D9 /* Captain_idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AF180257C5003679D9 /* Captain_idle.atlas */; };
+		3EF5B7B218025D0B003679D9 /* ccc_008.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5B7B118025D0B003679D9 /* ccc_008.png */; };
 		5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF418012A95009A6818 /* CCCHomepage.png */; };
 		5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */; };
 		5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B479DF918012FCF009A6818 /* CCCHomepage_iPhone5.png */; };
@@ -87,6 +88,7 @@
 		3EF5B7AC18020EC0003679D9 /* Captain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Captain.h; path = ../Captain.h; sourceTree = "<group>"; };
 		3EF5B7AD18020EC0003679D9 /* Captain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Captain.m; path = ../Captain.m; sourceTree = "<group>"; };
 		3EF5B7AF180257C5003679D9 /* Captain_idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Captain_idle.atlas; sourceTree = "<group>"; };
+		3EF5B7B118025D0B003679D9 /* ccc_008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccc_008.png; path = Captain_idle.atlas/ccc_008.png; sourceTree = "<group>"; };
 		5B479DF418012A95009A6818 /* CCCHomepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CCCHomepage.png; sourceTree = "<group>"; };
 		5B479DF618012EFF009A6818 /* MazeLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeLevelsViewController.h; sourceTree = "<group>"; };
 		5B479DF718012EFF009A6818 /* MazeLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeLevelsViewController.m; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		3E16BA9617F541C200EC71DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3EF5B7B118025D0B003679D9 /* ccc_008.png */,
 				3EF5B7AF180257C5003679D9 /* Captain_idle.atlas */,
 				3EF5B7AA18020772003679D9 /* practiceMazeMap.png */,
 				3EF5B7A41801F857003679D9 /* CCC_running.atlas */,
@@ -360,6 +363,7 @@
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
+				3EF5B7B218025D0B003679D9 /* ccc_008.png in Resources */,
 				5BC218DF18013F2F001FC9A1 /* Gecko.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

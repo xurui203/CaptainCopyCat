@@ -16,16 +16,22 @@
 
 #pragma mark - Initialization
 - (void)initialize {
-    
+//    SKSpriteNode *captain = [self createCaptain];
+//    
+////    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
+// 
+//    [self addChild:captain];
+
 }
 
 -(SKSpriteNode*) createCaptain {
-    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"Captain_idle"];
-    captain.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame)-150);
-    captain.name = @"captain";
-    [self addChild:captain];
+    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008"];
+    captain.position = CGPointMake(CGRectGetMidX(self.frame)+100,
+                                   CGRectGetMidY(self.frame)+150);
     
+    captain.name = @"captain";
+    captain.zPosition = 100;
+    NSLog(@"createdcaptain");
     return captain;
 }
 
