@@ -41,15 +41,28 @@
 }
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
-        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-        background.name = @"background";
-        [self addChild:background];
+//        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
+//        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+//        background.name = @"background";
+        
+        SKSpriteNode *groundSprite = [self makeGround];
+        groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) - 150, CGRectGetMidY(self.frame) - 300);
+        groundSprite.name = @"ground1";
+        groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+        groundSprite.physicsBody.dynamic = NO;
+//        [self addChild:background];
+        [self addChild:groundSprite];
+        
         
     }
     return self;
 }
 
+-(SKSpriteNode *)makeGround
+{
+    SKSpriteNode * ground = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(500, 200)];
+    return ground;
+}
 
 + (void)loadSceneAssets {
     
@@ -63,7 +76,7 @@
 }
 -(void)showCaptain {
           Captain *captain = [[Captain alloc]init];
-              captain.alpha= 1.0f;
+//            captain.alpha= 1.0f;
         [self addChild:[captain createCaptain]];
     
 

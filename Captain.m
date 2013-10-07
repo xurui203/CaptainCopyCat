@@ -26,13 +26,11 @@
 
 -(SKSpriteNode*) createCaptain {
     SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008"];
-    captain.position = CGPointMake(CGRectGetMidX(self.frame)+100,
-                                   CGRectGetMidY(self.frame)+150);
+    captain.position = CGPointMake(CGRectGetMidX(self.frame) + 100,
+                                   CGRectGetMidY(self.frame) + 450);
     captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:captain.size];
-    captain.physicsBody.dynamic = YES;
-    
     captain.name = @"captain";
-    captain.zPosition = 100;
+//    captain.zPosition = 100;
     NSLog(@"createdcaptain");
     return captain;
 }
