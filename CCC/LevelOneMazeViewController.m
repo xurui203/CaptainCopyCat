@@ -38,7 +38,6 @@
 {
     [super viewDidLoad];
     
-    
 	// Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,6 +49,8 @@
     
     [self.skView presentScene:levelOneScene];
     [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//        [self hideSuperPowerDrawer:YES animated:YES];
+        [self.SuperpowerDrawer setHidden:YES];
         self.levelDescription.alpha = 1.0f;
         self.playButton.alpha = 1.0f;
     } completion:NULL];
@@ -85,11 +86,11 @@ self.skView.showsNodeCount = YES;
 
 }
 
-- (void)showSuperPowerDrawer:(BOOL)shouldShow animated:(BOOL)shouldAnimate {
-    CGFloat alpha = shouldShow ? 1.0f : 0.0f;
+- (void)hideSuperPowerDrawer:(BOOL)shouldHide animated:(BOOL)shouldAnimate {
+    CGFloat alpha = shouldHide ? 0.0f : 1.0f;
     
     if (shouldAnimate) {
-        [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.SuperpowerDrawer.alpha = alpha;
         } completion:NULL];
     } else {
@@ -105,7 +106,12 @@ self.skView.showsNodeCount = YES;
 }
 
 - (IBAction)superpowerDrawerButton:(id)sender {
-    
+    if (self.SuperpowerDrawer.hidden) {
+        [self.SuperpowerDrawer setHidden:NO];
+    }
+    else {
+        [self.SuperpowerDrawer setHidden:YES];
+    }
     
 }
 
