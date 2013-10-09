@@ -19,4 +19,6 @@ typedef void (^APAAssetLoadCompletionHandler)(void);
 - (void)startLevel;
 @property(strong) SKAction *sequence;
 -(void)moveRight;
+@property (nonatomic) SKAction *walkAnim;
+
 @end

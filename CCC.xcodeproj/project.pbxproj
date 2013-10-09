@@ -22,6 +22,7 @@
 		3E16BABE17F541C300EC71DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16BABC17F541C300EC71DC /* InfoPlist.strings */; };
 		3E16BAC017F541C300EC71DC /* CCCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16BABF17F541C300EC71DC /* CCCTests.m */; };
 		3E44B35D1805B10000E8EA8B /* Captain.atlasc in Resources */ = {isa = PBXBuildFile; fileRef = 3E44B35B1805B10000E8EA8B /* Captain.atlasc */; };
+		3E44B3601805CDEF00E8EA8B /* CCC_running.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3E44B35F1805CDEF00E8EA8B /* CCC_running.atlas */; };
 		3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22017FE58210029F506 /* LoginViewController.m */; };
 		3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */; };
 		3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22617FE64510029F506 /* MainMenuViewController.m */; };
@@ -74,6 +75,7 @@
 		3E16BABD17F541C300EC71DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E16BABF17F541C300EC71DC /* CCCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCTests.m; sourceTree = "<group>"; };
 		3E44B35B1805B10000E8EA8B /* Captain.atlasc */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Captain.atlasc; path = CCC/Captain.atlasc; sourceTree = "<group>"; };
+		3E44B35F1805CDEF00E8EA8B /* CCC_running.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CCC_running.atlas; sourceTree = "<group>"; };
 		3E5EC21F17FE58210029F506 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3E5EC22017FE58210029F506 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E5EC22117FE58210029F506 /* LearningModulesMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningModulesMainViewController.h; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		3E16BA9617F541C200EC71DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E44B35F1805CDEF00E8EA8B /* CCC_running.atlas */,
 				3EF5B7B118025D0B003679D9 /* ccc_008.png */,
 				3EF5B7AF180257C5003679D9 /* Captain_idle.atlas */,
 				3EF5B7AA18020772003679D9 /* practiceMazeMap.png */,
@@ -355,6 +358,7 @@
 				5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */,
 				3EF5B7AB18020772003679D9 /* practiceMazeMap.png in Resources */,
 				3EF5B7B0180257C5003679D9 /* Captain_idle.atlas in Resources */,
+				3E44B3601805CDEF00E8EA8B /* CCC_running.atlas in Resources */,
 				5B479E0718013A81009A6818 /* HomeIcon.png in Resources */,
 				5BC218DD18013EED001FC9A1 /* Eagle.png in Resources */,
 				5B479DFC180131CF009A6818 /* Kangeroo.png in Resources */,

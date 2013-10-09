@@ -115,7 +115,7 @@ self.skView.showsNodeCount = YES;
 
 - (IBAction)playLevelButton:(id)sender {
     [self hideUIOptions:YES animated:YES];
-    [self.levelOneScene startLevel];
+//    [self.levelOneScene startLevel];
     [self.moveLeftButton setHidden:NO];
     [self.moveRightButton setHidden:NO];
 }

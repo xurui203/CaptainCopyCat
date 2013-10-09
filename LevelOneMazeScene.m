@@ -26,6 +26,7 @@
 
 }
 @synthesize sequence;
+@synthesize walkAnim;
 
 //-(SKAction *)walkRight {
 //    if (_walkRight == nil) {
@@ -56,27 +57,27 @@
 //        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
 //        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
 //        background.name = @"background";
-        SKAction *walk = [SKAction animateWithTextures:CAPTAIN_ANIM_CCC timePerFrame:0.033];
-
-//        SKAction *resetDirection   = [SKAction scaleXTo:1  y:1 duration:0.0];
-        SKAction *walkAnim = [SKAction sequence:@[walk, walk, walk, walk, walk, walk]];
-//    SKAction *moveRight  = [SKAction moveToX:900 duration:walkAnim.duration];
-        SKAction *moveRight = [SKAction moveByX:100 y:0 duration:walkAnim.duration];
-        SKAction *walkAndMoveRight = [SKAction group:@[walkAnim, moveRight]];
-        SKAction *remove = [SKAction removeFromParent];
+//        SKAction *walk = [SKAction animateWithTextures:CAPTAIN_ANIM_CCC timePerFrame:0.033];
+//
+////        SKAction *resetDirection   = [SKAction scaleXTo:1  y:1 duration:0.0];
+//        SKAction *walkAnim = [SKAction sequence:@[walk, walk, walk, walk, walk, walk]];
+////    SKAction *moveRight  = [SKAction moveToX:900 duration:walkAnim.duration];
+//        SKAction *moveRight = [SKAction moveByX:100 y:0 duration:walkAnim.duration];
+//        SKAction *walkAndMoveRight = [SKAction group:@[walkAnim, moveRight]];
+//        SKAction *remove = [SKAction removeFromParent];
 
         SKSpriteNode *ground1Sprite = [self makeGround1];
         SKSpriteNode *ground2Sprite = [self makeGround2];
         
-        NSMutableArray *walkFrames = [NSMutableArray array];
+//        NSMutableArray *walkFrames = [NSMutableArray array];
         
-        self.walkAnimation = walkFrames;
+//        self.walkAnimation = walkFrames;
 //        [self addChild:background];
         [self addChild:ground1Sprite];
         [self addChild:ground2Sprite];
         
-//        [self startLevel];
-        self.sequence = [SKAction repeatActionForever:[SKAction sequence:@[remove, walkAndMoveRight]]];
+        [self startLevel];
+//        self.sequence = [SKAction repeatActionForever:[SKAction sequence:@[remove, walkAndMoveRight]]];
 
     }
     return self;
@@ -157,9 +158,45 @@
 //            captain.alpha= 1.0f;
         [self addChild:[self.captain createCaptain]];
     
-
+    [self setUpActions];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+    [captain runAction:walkAnim];
+}
+-(void)update:(NSTimeInterval)currentTime {
+
+    [self enumerateChildNodesWithName:@"captain" usingBlock:^(SKNode *node, BOOL *stop) {
+        
+        SKNode* captain = [self childNodeWithName:@"captain"];
+        if ([captain isKindOfClass:[SKSpriteNode class]]) {
+            SKSpriteNode *captain = (SKSpriteNode *)captain;
+
+        };
+        
+    }];
+}
+     
+     -(void) setUpActions {
+         SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+         
+         SKTexture *run1 = [atlas textureNamed:@"ccc_001"];
+         SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
+         SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
+         SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
+         SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
+         SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
+         
+         NSArray *atlasTexture = @[run1,run2,run3,run4,run5,run6];
+         
+         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
+         walkAnim = [SKAction sequence:@[atlasAnim]];
+         
+         
+         SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+         [captain runAction:walkAnim];
+     }
 
 -(void)startLevel {
     [self performSelector:@selector(showCaptain) withObject:Nil afterDelay:2.0];
