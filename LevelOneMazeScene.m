@@ -180,19 +180,23 @@
      
      -(void) setUpActions {
          SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
-         
-         SKTexture *run1 = [atlas textureNamed:@"ccc_001"];
-         SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
+                  SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
          SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
          SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
          SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
          SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
-         
-         NSArray *atlasTexture = @[run1,run2,run3,run4,run5,run6];
+         SKTexture *run7 = [atlas textureNamed:@"ccc_007"];
+         SKTexture *run8 = [atlas textureNamed:@"ccc_008"];
+         SKTexture *run9 = [atlas textureNamed:@"ccc_009"];
+         SKTexture *run10 = [atlas textureNamed:@"ccc_010"];
+         SKTexture *run11= [atlas textureNamed:@"ccc_011"];
+         SKTexture *run12= [atlas textureNamed:@"ccc_012"];
+         NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
          
          SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
-         walkAnim = [SKAction sequence:@[atlasAnim]];
-         
+         SKAction *moveRight = [SKAction moveByX:100 y:0 duration:.3];
+
+         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
          
          SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
          [captain runAction:walkAnim];
