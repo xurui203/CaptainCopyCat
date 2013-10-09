@@ -13,17 +13,28 @@
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
 @property NSArray *walkAnimation;
-@property (nonatomic,readwrite) Captain *captain;
+@property (nonatomic) Captain *captain;
+@property (nonatomic, strong) NSArray *walkFramesRight;
+@property (nonatomic) SKNode *player;
 @end
 
 
 @implementation LevelOneMazeScene
 {
     NSTimeInterval _currentTime;
+    
 
 }
+@synthesize sequence;
 
-
+//-(SKAction *)walkRight {
+//    if (_walkRight == nil) {
+//        self.walkFramesRight = [[self class] animationFramesForImageNamePrefix:@"MSWWalkRight-" frameCount:kDefaultNumberOfWalkFrames];
+//        _animateManWalkingRight = [SKAction animateWithTextures:self.walkFramesRight timePerFrame:kShowCharacterFramesOverOneSecond resize:YES restore:NO];
+//    }
+//    
+//    return _animateManWalkingRight;
+//}
 #pragma mark - Shared Assets
 + (void)loadSceneAssetsWithCompletionHandler:(APAAssetLoadCompletionHandler)handler {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -45,67 +56,68 @@
 //        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
 //        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
 //        background.name = @"background";
-        
+        SKAction *walk = [SKAction animateWithTextures:CAPTAIN_ANIM_CCC timePerFrame:0.033];
+
+//        SKAction *resetDirection   = [SKAction scaleXTo:1  y:1 duration:0.0];
+        SKAction *walkAnim = [SKAction sequence:@[walk, walk, walk, walk, walk, walk]];
+//    SKAction *moveRight  = [SKAction moveToX:900 duration:walkAnim.duration];
+        SKAction *moveRight = [SKAction moveByX:100 y:0 duration:walkAnim.duration];
+        SKAction *walkAndMoveRight = [SKAction group:@[walkAnim, moveRight]];
+        SKAction *remove = [SKAction removeFromParent];
+
         SKSpriteNode *ground1Sprite = [self makeGround1];
         SKSpriteNode *ground2Sprite = [self makeGround2];
         
         NSMutableArray *walkFrames = [NSMutableArray array];
-        //SKTextureAtlas *walkAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
         
-        //for(int i =1; i<=walkAtlas.textureNames.count; ++i) {
-           // NSString *texture = [NSString stringWithFormat:@"ccc_%03d",i];
-            
-//            [walkFrames addObject:[walkAtlas textureNamed:texture]];
-        //}
         self.walkAnimation = walkFrames;
 //        [self addChild:background];
         [self addChild:ground1Sprite];
         [self addChild:ground2Sprite];
         
-        
+//        [self startLevel];
+        self.sequence = [SKAction repeatActionForever:[SKAction sequence:@[remove, walkAndMoveRight]]];
+
     }
     return self;
 }
 
 
-
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    
-    //CGPoint location = [self.captain position];
-    
-    SKSpriteNode *captainCC = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
-    captainCC.position = CGPointMake(20,130);
-    captainCC.zPosition=1;
-    captainCC.scale = 0.5;
-    SKAction *action = [SKAction moveToX:self.frame.size.height-100 duration:3];
-    SKAction *remove = [SKAction removeFromParent];
-    [captainCC runAction:[SKAction sequence:@[action,remove]]];
-    [self addChild:captainCC];
-    
-//    if (self.captain != nil)
-//    {
-//        SKAction *animate = [SKAction
-//                             animateWithTextures:self.walkAnimation
-//                             timePerFrame: 0.05];
-//        [self.captain runAction:animate];
-//    }
+//- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    // each time the user touches the screen, we create a new sprite, set its position, ...
+////    self.captain = [Captain spriteNodeWithTexture:CAPTAIN_TEX_CCC_005 size:CGSizeMake(100, 1)];
+////    captainWalking.position = self.captain.position;
 //    
-//    -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//        /* Called when a touch begins */
-//        CGPoint location = [_plane position];
-//        SKSpriteNode *bullet = [SKSpriteNode spriteNodeWithImageNamed:@"B 2.png"];
-//        bullet.position = CGPointMake(location.x,location.y+_plane.size.height/2);
-//        //bullet.position = location;
-//        bullet.zPosition = 1;
-//        bullet.scale = 0.8;
-//        SKAction *action = [SKAction moveToY:self.frame.size.height+bullet.size.height duration:2];
-//        SKAction *remove = [SKAction removeFromParent];
-//        [bullet runAction:[SKAction sequence:@[action,remove]]];
-//        [self addChild:bullet];
-//    }
-}
+//    // ... attach the action with the walk animation, and add it to our scene
+//    self.captain.position =CGPointMake(20,130);
+//
+//    [self.captain runAction:sequence];
+//    [self addChild:self.captain];
+//
+//    //CGPoint location = [self.captain position];
+//    
+////    SKSpriteNode *captainCC = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
+////    captainCC.position = CGPointMake(20,130);
+////    captainCC.zPosition=1;
+////    captainCC.scale = 0.5;
+////    SKAction *action = [SKAction moveToX:self.frame.size.height-100 duration:3];
+////    SKAction *remove = [SKAction removeFromParent];
+////    [self.captain runAction:[SKAction sequence:@[action,remove]]];
+////    [self addChild:captainCC];
+//    
+////    if (self.captain != nil)
+////    {
+////        SKAction *animate = [SKAction
+////                             animateWithTextures:self.walkAnimation
+////                             timePerFrame: 0.05];
+////        [self.captain runAction:animate];
+////    }
+////    
 
+////    }
+//}
+//
 
 
 -(SKSpriteNode *)makeGround1
@@ -138,10 +150,12 @@
 
 
 }
+
+//INITIALIZE A CAPTAIN OBJECT
 -(void)showCaptain {
           self.captain = [[Captain alloc]init];
 //            captain.alpha= 1.0f;
-        //[self addChild:[self.captain createCaptain]];
+        [self addChild:[self.captain createCaptain]];
     
 
 }
@@ -153,70 +167,11 @@
 }
 
 
-
-//#pragma mark - Loop Update
-//- (void)update:(NSTimeInterval)currentTime {
-//    // Handle time delta.
-//    // If we drop below 60fps, we still want everything to move the same distance.
-//    CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
-//    self.lastUpdateTimeInterval = currentTime;
-//    if (timeSinceLast > 1) { // more than a second since last update
-//        timeSinceLast = kMinTimeInterval;
-//        self.lastUpdateTimeInterval = currentTime;
-////        self.worldMovedForUpdate = YES;
-//    }
-//    
-//    [self updateWithTimeSinceLastUpdate:timeSinceLast];
-//    
-//        // heroMoveDirection is used by game controllers.
-////        CGPoint captainMoveDirection = self.captain.;
-////        if (hypotf(captainMoveDirection.x, captainMoveDirection.y) > 0.0f) {
-////            [self.captain moveInDirection:captainMoveDirection withTimeInterval:timeSinceLast];
-////        }
-////        else {
-//    
-//            if (self.captain.moveLeft) {
-//                [self.captain move:CCCMoveDirectionLeft withTimeInterval:timeSinceLast];
-//            } else if (self.captain.moveRight) {
-//                [self.captain move:CCCMoveDirectionRight withTimeInterval:timeSinceLast];
-//            }
-////        }
-//
-//    }
-//
-//
-//
-//#pragma mark - Loop Update
-//- (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
-//    [self.captain updateWithTimeSinceLastUpdate:timeSinceLast];
-//    
-//}
-
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    
-//}
-//-(void)moveRight {
-//    [self.captain moveRight];
-//}
-//
-//-(void)moveLeft {
-//    [self.captain moveLeft];
-//}
-
-
-//- (void)update:(NSTimeInterval)currentTime {
-//    // Handle time delta.
-//    // If we drop below 60fps, we still want everything to move the same distance.
-//    CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
-//    self.lastUpdateTimeInterval = currentTime;
-//    if (timeSinceLast > 1) { // more than a second since last update
-//        timeSinceLast = 1.0 / 60.0;
-//        self.lastUpdateTimeInterval = currentTime;
-//    }
-//    
-////    [self updateWithTimeSinceLastUpdate:timeSinceLast];
-//    
-//}
+-(void)moveRight {
+    NSLog(@"moveRight");
+    SKAction *hover = [SKAction moveByX:100.0 y:0 duration:1.0];
+    [self.captain runAction:hover];
+    [self addChild:self.captain];
+}
 
 @end

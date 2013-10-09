@@ -17,5 +17,6 @@ typedef void (^APAAssetLoadCompletionHandler)(void);
 
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 - (void)startLevel;
-
+@property(strong) SKAction *sequence;
+-(void)moveRight;
 @end

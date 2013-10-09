@@ -104,6 +104,9 @@
                                         <state key="normal" title="⬅">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="moveLeftButton:" destination="vI0-Ed-55x" eventType="touchUpInside" id="ccy-Ja-CfM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-NT-1uM">
                                         <rect key="frame" x="423" y="146" width="30" height="30"/>
@@ -111,6 +114,9 @@
                                         <state key="normal" title="➡">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="moveRightButton:" destination="vI0-Ed-55x" eventType="touchUpInside" id="9bt-uE-ozA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -172,6 +178,7 @@
                     <connections>
                         <outlet property="SuperpowerDrawer" destination="4Og-3y-gMq" id="nfy-Tg-VKB"/>
                         <outlet property="levelDescription" destination="3VP-TR-ooj" id="66t-MT-qTJ"/>
+                        <outlet property="moveLeftButton" destination="1rN-NT-1uM" id="3LC-ao-u20"/>
                         <outlet property="playButton" destination="xVF-uJ-eAW" id="zSe-kH-4yt"/>
                         <outlet property="skView" destination="jgJ-CE-foY" id="AYo-Gt-D6a"/>
                     </connections>
@@ -540,6 +547,10 @@
         <image name="CCCHomepage.png" width="960" height="640"/>
         <image name="Eagle.png" width="139" height="98"/>
         <image name="Gecko.png" width="156" height="95"/>
+        <image name="HomeIcon.png" width="256" height="256"/>
+        <image name="HomeIcon.png" width="256" height="256"/>
+        <image name="HomeIcon.png" width="256" height="256"/>
+        <image name="HomeIcon.png" width="256" height="256"/>
         <image name="HomeIcon.png" width="256" height="256"/>
         <image name="Kangeroo.png" width="134" height="96"/>
     </resources>
