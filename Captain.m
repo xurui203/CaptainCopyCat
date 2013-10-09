@@ -34,8 +34,12 @@
 -(SKSpriteNode*) createCaptain {
     SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008"];
 //   SKSpriteNode *captain = [SKSpriteNode spriteNodeWithTexture:CAPTAIN_TEX_CCC_001];
-    captain.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame) + 80);
+//<<<<<<< HEAD
+//    captain.position = CGPointMake(CGRectGetMidX(self.frame),
+//                                   CGRectGetMidY(self.frame) + 80);
+//=======
+    captain.position = CGPointMake(CGRectGetMidX(self.frame)-100,
+                                   CGRectGetMidY(self.frame) + 450);
     captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100, 1)];
     captain.physicsBody.dynamic = YES;
     captain.physicsBody.usesPreciseCollisionDetection = YES;
