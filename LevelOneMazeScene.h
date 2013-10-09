@@ -17,6 +17,5 @@ typedef void (^APAAssetLoadCompletionHandler)(void);
 
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 - (void)startLevel;
-- (void)moveLeft;
-- (void)moveRight;
+
 @end

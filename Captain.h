@@ -12,6 +12,10 @@
 
 @interface Captain : SKSpriteNode
 
+@end
+
+@interface Captain()
+
 @property (nonatomic, weak) Captain *Captain;
 /* Preload shared animation frames, emitters, etc. */
 - (id)initAtPosition:(CGPoint)position withPlayer:(Captain *)Captain;
@@ -19,6 +23,14 @@
 -(SKSpriteNode*) createCaptain;
 - (NSArray *)idleAnimationFrames;
 - (NSArray *)walkAnimationFrames;
+
+- (void)moveLeft;
+- (void)moveRight;
+
+@property (nonatomic, strong, readwrite) SKAction *animateManWalkingRight;
+@property (nonatomic, strong) NSArray *walkFramesRight;
+@end
+
 
 ///* Used by the move: method to move a character in a given direction. */
 //typedef enum : uint8_t {
@@ -64,6 +76,4 @@
 //- (void)moveTowards:(CGPoint)position withTimeInterval:(NSTimeInterval)timeInterval;
 //- (void)moveInDirection:(CGPoint)direction withTimeInterval:(NSTimeInterval)timeInterval;
 
-- (void)moveLeft;
-- (void)moveRight;
-@end
+

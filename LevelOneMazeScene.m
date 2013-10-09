@@ -73,6 +73,7 @@
 {
     
     //CGPoint location = [self.captain position];
+    
     SKSpriteNode *captainCC = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
     captainCC.position = CGPointMake(20,130);
     captainCC.zPosition=1;
@@ -195,13 +196,13 @@
 //{
 //    
 //}
--(void)moveRight {
-    [self.captain moveRight];
-}
-
--(void)moveLeft {
-    [self.captain moveLeft];
-}
+//-(void)moveRight {
+//    [self.captain moveRight];
+//}
+//
+//-(void)moveLeft {
+//    [self.captain moveLeft];
+//}
 
 
 //- (void)update:(NSTimeInterval)currentTime {

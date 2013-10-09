@@ -104,9 +104,6 @@
                                         <state key="normal" title="⬅">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="moveLeftButton:" destination="vI0-Ed-55x" eventType="touchUpInside" id="Lpg-N0-pgz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-NT-1uM">
                                         <rect key="frame" x="423" y="146" width="30" height="30"/>
@@ -114,15 +111,9 @@
                                         <state key="normal" title="➡">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="moveRightButton:" destination="vI0-Ed-55x" eventType="touchUpInside" id="2Dm-W0-O8E"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="moveRightButton" destination="1rN-NT-1uM" id="aJs-Vg-4eI"/>
-                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNQ-kM-F8e">
                                 <rect key="frame" x="431" y="9" width="39" height="39"/>
@@ -181,7 +172,6 @@
                     <connections>
                         <outlet property="SuperpowerDrawer" destination="4Og-3y-gMq" id="nfy-Tg-VKB"/>
                         <outlet property="levelDescription" destination="3VP-TR-ooj" id="66t-MT-qTJ"/>
-                        <outlet property="moveLeftButton" destination="gQE-3p-cUP" id="Hnf-vq-Bdo"/>
                         <outlet property="playButton" destination="xVF-uJ-eAW" id="zSe-kH-4yt"/>
                         <outlet property="skView" destination="jgJ-CE-foY" id="AYo-Gt-D6a"/>
                     </connections>

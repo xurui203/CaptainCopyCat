@@ -8,7 +8,10 @@
 
 #import "Captain.h"
 
+#import <UIKit/UIKit.h>
 @implementation Captain
+
+
 
 + (void)loadSharedAssets {
     // overridden by subclasses
@@ -42,6 +45,18 @@
 - (NSArray *)walkAnimationFrames {
     return nil;
 }
+
+
+
+//SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"monster"];
+//SKTexture *f1 = [atlas textureNamed:@"monster-walk1.png"];
+//SKTexture *f2 = [atlas textureNamed:@"monster-walk2.png"];
+//SKTexture *f3 = [atlas textureNamed:@"monster-walk3.png"];
+//SKTexture *f4 = [atlas textureNamed:@"monster-walk4.png"];
+//NSArray *monsterWalkTextures = @[f1,f2,f3,f4];
+//
+
+
 //
 //
 //#pragma mark - Loop Update
@@ -190,7 +205,6 @@
 //        self.requestedAnimation = CCCAnimationStateWalk;
 //}
 
-
 -(void)moveRight:(SKSpriteNode*)captain {
     SKAction *hover = [SKAction moveByX:5.0 y:0 duration:1.0];
     [captain runAction: hover];
@@ -201,5 +215,8 @@
     [captain runAction: hover];
     
 }
+
+
+
 
 @end

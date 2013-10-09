@@ -89,13 +89,13 @@ self.skView.showsNodeCount = YES;
     }
 
 }
-- (IBAction)moveRightButton:(id)sender {
-    [self.levelOneScene moveRight];
- }
-
-- (IBAction)moveLeftButton:(id)sender {
-    [self.levelOneScene moveLeft];
-}
+//- (IBAction)moveRightButton:(id)sender {
+//    [self.levelOneScene moveRight];
+// }
+//
+//- (IBAction)moveLeftButton:(id)sender {
+//    [self.levelOneScene moveLeft];
+//}
 
 - (void)hideSuperPowerDrawer:(BOOL)shouldHide animated:(BOOL)shouldAnimate {
     CGFloat alpha = shouldHide ? 0.0f : 1.0f;
