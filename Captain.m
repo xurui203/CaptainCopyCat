@@ -34,7 +34,7 @@
 -(SKSpriteNode*) createCaptain {
     SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008"];
 //   SKSpriteNode *captain = [SKSpriteNode spriteNodeWithTexture:CAPTAIN_TEX_CCC_001];
-    captain.position = CGPointMake(CGRectGetMidX(self.frame) + 100,
+    captain.position = CGPointMake(CGRectGetMidX(self.frame)-100,
                                    CGRectGetMidY(self.frame) + 450);
     captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100, 1)];
     captain.name = @"captain";
