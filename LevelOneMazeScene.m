@@ -195,9 +195,12 @@
          SKTexture *run11= [atlas textureNamed:@"ccc_011"];
          SKTexture *run12= [atlas textureNamed:@"ccc_012"];
          NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
-         
-         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
-         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
+
+         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.05];
+         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:atlasAnim.duration];
+
+//         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
+//         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
 
 
          walkAnim = [SKAction group:@[atlasAnim,moveRight]];
