@@ -74,19 +74,9 @@
 
 #endif // __CAPTAIN_ATLAS__
 
-typedef enum : uint8_t {
-    APAMoveDirectionLeft = 0,
-    APAMoveDirectionRight
-} APAMoveDirection;
-
 /* The different animation states of an animated character. */
-typedef enum : uint8_t {
-    APAAnimationStateIdle = 0,
-    APAAnimationStateWalk
-} APAAnimationState;
 
 @interface Captain : SKSpriteNode
-@property (nonatomic) APAAnimationState requestedAnimation;
 @property (nonatomic) CGFloat animationSpeed;
 @property (nonatomic) CGFloat movementSpeed;
 
@@ -99,14 +89,6 @@ typedef enum : uint8_t {
 -(SKSpriteNode*) createCaptain;
 - (NSArray *)idleAnimationFrames;
 - (NSArray *)walkAnimationFrames;
-
-- (void)moveLeft;
-- (void)moveRight;
-
-@property (nonatomic, strong, readwrite) SKAction *animateManWalkingRight;
-@property (nonatomic, strong) NSArray *walkFramesRight;
-
-- (void)move:(APAMoveDirection)direction withTimeInterval:(NSTimeInterval)timeInterval;
 
 
 /* Assets - should be overridden for animated characters. */

@@ -54,6 +54,8 @@
 }
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        self.backgroundColor = [SKColor whiteColor];
+
 //        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
 //        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
 //        background.name = @"background";
@@ -65,7 +67,7 @@
 //        SKAction *moveRight = [SKAction moveByX:100 y:0 duration:walkAnim.duration];
 //        SKAction *walkAndMoveRight = [SKAction group:@[walkAnim, moveRight]];
 //        SKAction *remove = [SKAction removeFromParent];
-
+        
         SKSpriteNode *ground1Sprite = [self makeGround1];
         SKSpriteNode *ground2Sprite = [self makeGround2];
         
@@ -162,6 +164,7 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
     SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
     [captain runAction:walkAnim];
 }
@@ -193,8 +196,8 @@
          SKTexture *run12= [atlas textureNamed:@"ccc_012"];
          NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
          
-         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
-         SKAction *moveRight = [SKAction moveByX:100 y:0 duration:.3];
+         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.05];
+         SKAction *moveRight = [SKAction moveByX:100 y:0 duration:atlasAnim.duration];
 
          walkAnim = [SKAction group:@[atlasAnim,moveRight]];
          
