@@ -82,27 +82,44 @@
         
         
         NSMutableArray *walkFrames = [NSMutableArray array];
+        SKTextureAtlas *captainAnimatedAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+        int numImages = captainAnimatedAtlas.textureNames.count;
+        for (int i=1; i <= 9; i++) {
+            NSString *textureName = [NSString stringWithFormat:@"ccc_00%d", i];
+            SKTexture *run = [captainAnimatedAtlas textureNamed:textureName];
+            [walkFrames addObject:run];
+        }
+        //FIX HARD CODED RUNS 10-12
+        SKTexture *run10 = [captainAnimatedAtlas textureNamed:@"ccc_010"];
+        SKTexture *run11= [captainAnimatedAtlas textureNamed:@"ccc_011"];
+        SKTexture *run12= [captainAnimatedAtlas textureNamed:@"ccc_012"];
         
-        SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
-        SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
-        SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
-        SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
-        SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
-        SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
-        SKTexture *run7 = [atlas textureNamed:@"ccc_007"];
-        SKTexture *run8 = [atlas textureNamed:@"ccc_008"];
-        SKTexture *run9 = [atlas textureNamed:@"ccc_009"];
-        SKTexture *run10 = [atlas textureNamed:@"ccc_010"];
-        SKTexture *run11= [atlas textureNamed:@"ccc_011"];
-        SKTexture *run12= [atlas textureNamed:@"ccc_012"];
-        NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
-        
+        [walkFrames addObject:run10];
+        [walkFrames addObject:run11];
+        [walkFrames addObject:run12];
 
+        self.walkAnimation = walkFrames;
+        
+        SKTexture *temp = self.walkAnimation[0];
+        self.captain = [SKSpriteNode spriteNodeWithTexture:temp];
+        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-200, CGRectGetMidY(self.frame)-60);
+        [self addChild:self.captain];
+        [self walkingCaptain];
     }
     return self;
 }
 
 
+-(void)walkingCaptain
+{
+    //This is our general runAction method to make our bear walk.
+    [self.captain runAction:[SKAction repeatActionForever:
+                      [SKAction animateWithTextures:self.walkAnimation
+                                       timePerFrame:0.1f
+                                             resize:NO
+                                            restore:YES]] withKey:@"walkingInPlaceCaptain"];
+    return;
+}
 //- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 //{
 //    // each time the user touches the screen, we create a new sprite, set its position, ...
@@ -226,31 +243,31 @@
 }
 
 -(void) setUpActions {
-         SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
-                  SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
-         SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
-         SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
-         SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
-         SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
-         SKTexture *run7 = [atlas textureNamed:@"ccc_007"];
-         SKTexture *run8 = [atlas textureNamed:@"ccc_008"];
-         SKTexture *run9 = [atlas textureNamed:@"ccc_009"];
-         SKTexture *run10 = [atlas textureNamed:@"ccc_010"];
-         SKTexture *run11= [atlas textureNamed:@"ccc_011"];
-         SKTexture *run12= [atlas textureNamed:@"ccc_012"];
-         NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
-
-         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.05];
-         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:atlasAnim.duration];
-
-//         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
-//         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
-
-
-         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
-         
-         SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-         [captain runAction:walkAnim];
+//         SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+//                  SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
+//         SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
+//         SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
+//         SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
+//         SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
+//         SKTexture *run7 = [atlas textureNamed:@"ccc_007"];
+//         SKTexture *run8 = [atlas textureNamed:@"ccc_008"];
+//         SKTexture *run9 = [atlas textureNamed:@"ccc_009"];
+//         SKTexture *run10 = [atlas textureNamed:@"ccc_010"];
+//         SKTexture *run11= [atlas textureNamed:@"ccc_011"];
+//         SKTexture *run12= [atlas textureNamed:@"ccc_012"];
+//         NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
+//
+//         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.05];
+//         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:atlasAnim.duration];
+//
+////         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
+////         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
+//
+//
+//         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
+//         
+//         SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+//         [captain runAction:walkAnim];
      }
 
 -(void)startLevel {
