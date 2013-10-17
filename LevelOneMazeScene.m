@@ -79,6 +79,24 @@
         
         [self startLevel];
 //        self.sequence = [SKAction repeatActionForever:[SKAction sequence:@[remove, walkAndMoveRight]]];
+        
+        
+        NSMutableArray *walkFrames = [NSMutableArray array];
+        
+        SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+        SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
+        SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
+        SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
+        SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
+        SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
+        SKTexture *run7 = [atlas textureNamed:@"ccc_007"];
+        SKTexture *run8 = [atlas textureNamed:@"ccc_008"];
+        SKTexture *run9 = [atlas textureNamed:@"ccc_009"];
+        SKTexture *run10 = [atlas textureNamed:@"ccc_010"];
+        SKTexture *run11= [atlas textureNamed:@"ccc_011"];
+        SKTexture *run12= [atlas textureNamed:@"ccc_012"];
+        NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
+        
 
     }
     return self;
@@ -162,10 +180,37 @@
     [self setUpActions];
 }
 
+
+
+// Add these new methods
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    CGPoint location = [[touches anyObject] locationInNode:self];
+    CGFloat multiplierForDirection;
+    
+    if (location.x <= CGRectGetMidX(self.frame)) {
+        //walk left
+        multiplierForDirection = 1;
+    } else {
+        //walk right
+        multiplierForDirection = -1;
+    }
+    
+    _captain.xScale = fabs(_captain.xScale) * multiplierForDirection;
+    [self captain];
+}
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
     SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
     [captain runAction:walkAnim];
+    
+    
+    
+    
+    
 }
 -(void)update:(NSTimeInterval)currentTime {
 
@@ -179,8 +224,8 @@
         
     }];
 }
-     
-     -(void) setUpActions {
+
+-(void) setUpActions {
          SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
                   SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
          SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
