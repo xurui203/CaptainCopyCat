@@ -14,8 +14,7 @@
 @interface Captain ()
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
-@property (nonatomic) Captain *captain;
-@property (nonatomic, strong) NSArray *walkFramesRight; //**MOVE OUT FROM THIS CLASS TO CAPTAIN CLASS**//
+@property (nonatomic, strong) NSArray *walkFramesRight;
 @end
 
 @implementation Captain
@@ -31,25 +30,24 @@
     SKSpriteNode *captain = [self createCaptain];
     
 //    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
-// 
+//
+    [self setCaptainWalkFrames];
     [self addChild:captain];
 
 }
 
 -(SKSpriteNode*) createCaptain {
     SKTexture *temp = self.walkAnimationFrames[0];
-    //   self.captain = [Captain spriteNodeWithTexture:temp]
     SKSpriteNode *captain = [SKSpriteNode spriteNodeWithTexture:temp];
     
     captain.position = CGPointMake(CGRectGetMidX(self.frame),
                                    CGRectGetMidY(self.frame));
     captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
     captain.physicsBody.mass = 50.0f;
-    captain.physicsBody.dynamic = YES;
+    captain.physicsBody.dynamic = NO;
     captain.physicsBody.usesPreciseCollisionDetection = YES;
 
     captain.name = @"captain";
-//    captain.zPosition = 100;
     NSLog(@"createdcaptain");
     return captain;
 }
@@ -58,6 +56,14 @@
     return nil;
 }
 
+- (void)setCaptainWalkFrames {
+    self.walkFramesRight = self.walkAnimationFrames;
+}
+
+
+- (NSArray *)getCaptainWalkFrames {
+    return self.walkFramesRight;
+}
 - (NSArray *)walkAnimationFrames {
     
     NSMutableArray *walkFrames = [NSMutableArray array];
@@ -69,18 +75,17 @@
         [walkFrames addObject:run];
     }
     //FIX HARD CODED RUNS 10-12
-    SKTexture *run10 = [captainAnimatedAtlas textureNamed:@"ccc_010"];
-    SKTexture *run11= [captainAnimatedAtlas textureNamed:@"ccc_011"];
-    SKTexture *run12= [captainAnimatedAtlas textureNamed:@"ccc_012"];
+    SKTexture *run10 = [captainAnimatedAtlas textureNamed:@"ccc_0010"];
+    SKTexture *run11= [captainAnimatedAtlas textureNamed:@"ccc_0011"];
+    SKTexture *run12= [captainAnimatedAtlas textureNamed:@"ccc_0012"];
     
     [walkFrames addObject:run10];
     [walkFrames addObject:run11];
     [walkFrames addObject:run12];
     
-    self.walkFramesRight = walkFrames;
-    
-    return self.walkFramesRight;
+    return walkFrames;
 }
+
 
 
 @end

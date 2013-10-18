@@ -13,6 +13,8 @@
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
 @property Captain *captain;
+@property (nonatomic, strong) NSArray *walkFrames;
+
 @property (nonatomic) SKNode *player;
 @end
 
@@ -54,6 +56,7 @@
         [self addChild:ground2Sprite];
         
         [self startLevel];
+        self.walkFrames = self.captain.walkAnimationFrames;
         
         //INITIALIZE A CAPTAIN
 //        self.captain = [[Captain alloc]init];
@@ -66,20 +69,6 @@
     }
     return self;
 }
-
-
-
-//General method to make captain walk
--(void)walkingCaptain
-{
-    [self.captain runAction:[SKAction repeatActionForever:
-                      [SKAction animateWithTextures:self.captain.walkAnimationFrames
-                                       timePerFrame:0.1f
-                                             resize:NO
-                                            restore:YES]] withKey:@"walkingInPlaceCaptain"];
-    return;
-}
-
 
 -(SKSpriteNode *)makeGround1
 {
@@ -112,12 +101,26 @@
 
 }
 
+//General method to make captain walk
+-(void)walkingCaptain
+{
+    SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+
+    [captain runAction:[SKAction repeatActionForever:
+                             [SKAction animateWithTextures:self.captain.walkAnimationFrames
+                                              timePerFrame:0.1f
+                                                    resize:NO
+                                                   restore:YES]] withKey:@"walkingInPlaceCaptain"];
+    NSLog(@"Captain walking");
+    return;
+}
+
 //INITIALIZE A CAPTAIN OBJECT
 -(void)showCaptain {
           self.captain = [[Captain alloc]init];
         self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
-                                        CGRectGetMidY(self.frame));
-    [self addChild:[self.captain createCaptain]];
+                                        CGRectGetMidY(self.frame)-70);
+    [self addChild:self.captain.createCaptain];
     
     //[self walkingCaptain];
     [self setUpActions];
@@ -127,23 +130,10 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
-    CGPoint location = [[touches anyObject] locationInNode:self];
-    CGFloat multiplierForDirection;
-    
-    if (location.x <= CGRectGetMidX(self.frame)) {
-        //walk left
-        multiplierForDirection = 1;
-        NSLog(@"walking left");
-    } else {
-        //walk right
-        multiplierForDirection = -1;
-        NSLog(@"walking right");
-
-    }
-    
-    self.captain.xScale = fabs(self.captain.xScale) * multiplierForDirection;
-    [self walkingCaptain];
+   // SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+  //  [captain runAction:walkAnim];
+    NSLog(@"Touches ended");
+   // [self walkingCaptain];
 }
 
 
@@ -151,6 +141,7 @@
 
     SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
     [captain runAction:walkAnim];
+    NSLog(@"Touches began");
 
 }
 -(void)update:(NSTimeInterval)currentTime {
@@ -160,6 +151,7 @@
         SKNode* captain = [self childNodeWithName:@"captain"];
         if ([captain isKindOfClass:[SKSpriteNode class]]) {
             SKSpriteNode *captain = (SKSpriteNode *)captain;
+            NSLog(@"Found captain while updating");
 
         };
         
@@ -168,15 +160,12 @@
 
 -(void) setUpActions {
          SKAction *atlasAnim = [SKAction animateWithTextures:self.captain.walkAnimationFrames timePerFrame:.05];
-         //SKAction *moveRight = [SKAction moveByX:50 y:0 duration:atlasAnim.duration];
-    
-//         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
           SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
 
          walkAnim = [SKAction group:@[atlasAnim,moveRight]];
     
-        SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-         [captain runAction:walkAnim];
+     //   SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+        // [captain runAction:walkAnim];
      }
 
 -(void)startLevel {

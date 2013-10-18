@@ -89,6 +89,8 @@
 -(SKSpriteNode*) createCaptain;
 - (NSArray *)idleAnimationFrames;
 - (NSArray *)walkAnimationFrames;
+- (NSArray *)getCaptainWalkFrames;
+
 
 
 /* Assets - should be overridden for animated characters. */
