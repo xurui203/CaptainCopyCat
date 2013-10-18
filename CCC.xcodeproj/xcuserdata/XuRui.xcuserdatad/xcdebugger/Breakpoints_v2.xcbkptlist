@@ -17,6 +17,36 @@
             endingLineNumber = "132"
             landmarkName = "-update:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LevelOneMazeScene update:]"
+                  moduleName = "CCC"
+                  urlString = "file://localhost/Users/XuRui/Desktop/CaptainCopyCat/LevelOneMazeScene.m"
+                  timestampString = "403773268.087348"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__28-[LevelOneMazeScene update:]_block_invoke"
+                  moduleName = "CCC"
+                  urlString = "file://localhost/Users/XuRui/Desktop/CaptainCopyCat/LevelOneMazeScene.m"
+                  timestampString = "403773268.087779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "73">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
