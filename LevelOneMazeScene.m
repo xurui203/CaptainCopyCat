@@ -115,7 +115,7 @@
 //INITIALIZE A CAPTAIN OBJECT
 -(void)showCaptain {
           self.captain = [[Captain alloc]init];
-        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
+        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-160,
                                         CGRectGetMidY(self.frame));
     [self addChild:[self.captain createCaptain]];
     
@@ -127,23 +127,23 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
-    CGPoint location = [[touches anyObject] locationInNode:self];
-    CGFloat multiplierForDirection;
-    
-    if (location.x <= CGRectGetMidX(self.frame)) {
-        //walk left
-        multiplierForDirection = 1;
-        NSLog(@"walking left");
-    } else {
-        //walk right
-        multiplierForDirection = -1;
-        NSLog(@"walking right");
-
-    }
-    
-    self.captain.xScale = fabs(self.captain.xScale) * multiplierForDirection;
-    [self walkingCaptain];
+//    
+//    CGPoint location = [[touches anyObject] locationInNode:self];
+//    CGFloat multiplierForDirection;
+//    
+//    if (location.x <= CGRectGetMidX(self.frame)) {
+//        //walk left
+//        multiplierForDirection = 1;
+//        NSLog(@"walking left");
+//    } else {
+//        //walk right
+//        multiplierForDirection = -1;
+//        NSLog(@"walking right");
+//
+//    }
+//    
+//    self.captain.xScale = fabs(self.captain.xScale) * multiplierForDirection;
+//    [self walkingCaptain];
 }
 
 
