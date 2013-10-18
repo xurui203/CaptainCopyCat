@@ -13,8 +13,6 @@
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
 @property Captain *captain;
-@property (nonatomic, strong) NSArray *walkFrames;
-
 @property (nonatomic) SKNode *player;
 @end
 
@@ -56,16 +54,6 @@
         [self addChild:ground2Sprite];
         
         [self startLevel];
-        self.walkFrames = self.captain.walkAnimationFrames;
-        
-        //INITIALIZE A CAPTAIN
-//        self.captain = [[Captain alloc]init];
-//        self.captain.position = CGPointMake(CGRectGetMidX(self.frame),
-//                                       CGRectGetMidY(self.frame));
-//        [self addChild:[self.captain createCaptain]];
-//
-//        [self walkingCaptain];
-
     }
     return self;
 }
@@ -116,13 +104,11 @@
 }
 
 //INITIALIZE A CAPTAIN OBJECT
--(void)showCaptain {
-          self.captain = [[Captain alloc]init];
-        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
+-(void)initializeCaptain {
+    self.captain = [[Captain alloc]init];
+    self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
                                         CGRectGetMidY(self.frame)-70);
     [self addChild:self.captain.createCaptain];
-    
-    //[self walkingCaptain];
     [self setUpActions];
 }
 
@@ -130,10 +116,9 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-   // SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-  //  [captain runAction:walkAnim];
+
     NSLog(@"Touches ended");
-   // [self walkingCaptain];
+    [self walkingCaptain];
 }
 
 
@@ -151,7 +136,6 @@
         SKNode* captain = [self childNodeWithName:@"captain"];
         if ([captain isKindOfClass:[SKSpriteNode class]]) {
             SKSpriteNode *captain = (SKSpriteNode *)captain;
-            NSLog(@"Found captain while updating");
 
         };
         
@@ -159,17 +143,14 @@
 }
 
 -(void) setUpActions {
-         SKAction *atlasAnim = [SKAction animateWithTextures:self.captain.walkAnimationFrames timePerFrame:.05];
-          SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
+        SKAction *atlasAnim = [SKAction animateWithTextures:self.captain.walkAnimationFrames timePerFrame:.05];
+        SKAction *moveRight = [SKAction moveByX:40 y:0 duration:.3];
+        walkAnim = [SKAction group:@[atlasAnim,moveRight]];
 
-         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
-    
-     //   SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-        // [captain runAction:walkAnim];
      }
 
 -(void)startLevel {
-    [self performSelector:@selector(showCaptain) withObject:Nil afterDelay:2.0];
+    [self performSelector:@selector(initializeCaptain) withObject:Nil afterDelay:2.0];
 
 }
 

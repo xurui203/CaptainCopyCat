@@ -28,10 +28,6 @@
 #pragma mark - Initialization
 - (void)initialize {
     SKSpriteNode *captain = [self createCaptain];
-    
-//    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
-//
-    [self setCaptainWalkFrames];
     [self addChild:captain];
 
 }
@@ -56,33 +52,16 @@
     return nil;
 }
 
-- (void)setCaptainWalkFrames {
-    self.walkFramesRight = self.walkAnimationFrames;
-}
-
-
-- (NSArray *)getCaptainWalkFrames {
-    return self.walkFramesRight;
-}
 - (NSArray *)walkAnimationFrames {
     
     NSMutableArray *walkFrames = [NSMutableArray array];
     SKTextureAtlas *captainAnimatedAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
     int numImages = captainAnimatedAtlas.textureNames.count;
-    for (int i=1; i <= 9; i++) {
+    for (int i=1; i <= numImages; i++) {
         NSString *textureName = [NSString stringWithFormat:@"ccc_00%d", i];
         SKTexture *run = [captainAnimatedAtlas textureNamed:textureName];
         [walkFrames addObject:run];
     }
-    //FIX HARD CODED RUNS 10-12
-    SKTexture *run10 = [captainAnimatedAtlas textureNamed:@"ccc_0010"];
-    SKTexture *run11= [captainAnimatedAtlas textureNamed:@"ccc_0011"];
-    SKTexture *run12= [captainAnimatedAtlas textureNamed:@"ccc_0012"];
-    
-    [walkFrames addObject:run10];
-    [walkFrames addObject:run11];
-    [walkFrames addObject:run12];
-    
     return walkFrames;
 }
 
