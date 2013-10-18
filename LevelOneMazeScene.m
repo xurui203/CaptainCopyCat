@@ -60,8 +60,12 @@
             [self addChild:tiledMap];
         }
         tiledMap.zPosition = 0;
+        captain = [[Captain alloc]init];
+        SKTexture *temp = captain.walkAnimationFrames[0];
+        captain = [Captain spriteNodeWithTexture:temp];
         
-        captain = [[Captain alloc] init];
+        
+        
         captain.position = CGPointMake(100, 170);
         captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
         captain.physicsBody.mass = 50.0f;
@@ -94,26 +98,6 @@
     node.parent.position = CGPointMake(node.parent.position.x - cameraPositionInScene.x,                                       node.parent.position.y - cameraPositionInScene.y);
 }
 
--(SKSpriteNode *)makeGround1
-{
-    SKSpriteNode * groundSprite = [[SKSpriteNode alloc] initWithColor:[SKColor brownColor] size:CGSizeMake(300, 10)];
-    groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) - 150, CGRectGetMidY(self.frame) - 100);
-    groundSprite.name = @"ground1";
-    groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
-    groundSprite.physicsBody.dynamic = NO;
-    return groundSprite;
-}
-
--(SKSpriteNode *)makeGround2
-{
-    SKSpriteNode * groundSprite = [[SKSpriteNode alloc] initWithColor:[SKColor brownColor] size:CGSizeMake(150, 10)];
-    groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) + 200, CGRectGetMidY(self.frame) - 100);
-    groundSprite.name = @"ground1";
-    groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
-    groundSprite.physicsBody.dynamic = NO;
-    return groundSprite;
-}
-
 + (void)loadSceneAssets {
     
     // Load archived emitters and create copyable sprites.
@@ -140,15 +124,18 @@
 }
 
 //INITIALIZE A CAPTAIN OBJECT
--(void)initializeCaptain {
-    
-    captain = [[Captain alloc]init];
-//    self.captain = [[Captain alloc]init];
-    self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
-                                        CGRectGetMidY(self.frame)-70);
-    [self addChild:self.captain.createCaptain];
-    [self setUpActions];
-}
+//-(Captain*)initializeCaptain {
+//    
+//    captain = [[Captain alloc]init];
+////    self.captain = [[Captain alloc]init];
+//    self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
+//                                        CGRectGetMidY(self.frame)-70);
+////    [self addChild:self.captain.createCaptain];
+//    captain = captain.createCaptain;
+//    
+//    [self setUpActions];
+//    return captain;
+//}
 
 
 
@@ -218,8 +205,6 @@
 
     }
     
-    
-    
     [self setViewpointCenter:captain.position];
 
 }
@@ -261,5 +246,27 @@
     [captain runAction:hover];
 //    [self addChild:captain];
 }
+
+
+//
+//-(SKSpriteNode *)makeGround1
+//{
+//    SKSpriteNode * groundSprite = [[SKSpriteNode alloc] initWithColor:[SKColor brownColor] size:CGSizeMake(300, 10)];
+//    groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) - 150, CGRectGetMidY(self.frame) - 100);
+//    groundSprite.name = @"ground1";
+//    groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+//    groundSprite.physicsBody.dynamic = NO;
+//    return groundSprite;
+//}
+//
+//-(SKSpriteNode *)makeGround2
+//{
+//    SKSpriteNode * groundSprite = [[SKSpriteNode alloc] initWithColor:[SKColor brownColor] size:CGSizeMake(150, 10)];
+//    groundSprite.position = CGPointMake(CGRectGetMidX(self.frame) + 200, CGRectGetMidY(self.frame) - 100);
+//    groundSprite.name = @"ground1";
+//    groundSprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+//    groundSprite.physicsBody.dynamic = NO;
+//    return groundSprite;
+//}
 
 @end
