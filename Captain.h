@@ -84,7 +84,7 @@
 
 @property (nonatomic, weak) Captain *Captain;
 /* Preload shared animation frames, emitters, etc. */
-- (id)initAtPosition:(CGPoint)position withPlayer:(Captain *)Captain;
+//- (id)initAtPosition:(CGPoint)position withPlayer:(Captain *)Captain;
 - (void)initialize;
 -(SKSpriteNode*) createCaptain;
 - (NSArray *)idleAnimationFrames;

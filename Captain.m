@@ -11,7 +11,12 @@
 #import <UIKit/UIKit.h>
 
 
-
+@interface Captain ()
+//@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
+@property BOOL sceneCreated;
+@property (nonatomic) Captain *captain;
+@property (nonatomic, strong) NSArray *walkFramesRight; //**MOVE OUT FROM THIS CLASS TO CAPTAIN CLASS**//
+@end
 
 @implementation Captain
 
@@ -23,23 +28,21 @@
 
 #pragma mark - Initialization
 - (void)initialize {
-//    SKSpriteNode *captain = [self createCaptain];
-//    
-////    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
+    SKSpriteNode *captain = [self createCaptain];
+    
+//    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
 // 
-//    [self addChild:captain];
+    [self addChild:captain];
 
 }
 
 -(SKSpriteNode*) createCaptain {
-    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008"];
-//   SKSpriteNode *captain = [SKSpriteNode spriteNodeWithTexture:CAPTAIN_TEX_CCC_001];
-//<<<<<<< HEAD
-//    captain.position = CGPointMake(CGRectGetMidX(self.frame),
-//                                   CGRectGetMidY(self.frame) + 80);
-//=======
-    captain.position = CGPointMake(CGRectGetMidX(self.frame)-80,
-                                   CGRectGetMidY(self.frame) + 700);
+    SKTexture *temp = self.walkAnimationFrames[0];
+    //   self.captain = [Captain spriteNodeWithTexture:temp]
+    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithTexture:temp];
+    
+    captain.position = CGPointMake(CGRectGetMidX(self.frame),
+                                   CGRectGetMidY(self.frame));
     captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
     captain.physicsBody.mass = 50.0f;
     captain.physicsBody.dynamic = YES;
@@ -56,7 +59,27 @@
 }
 
 - (NSArray *)walkAnimationFrames {
-    return nil;
+    
+    NSMutableArray *walkFrames = [NSMutableArray array];
+    SKTextureAtlas *captainAnimatedAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
+    int numImages = captainAnimatedAtlas.textureNames.count;
+    for (int i=1; i <= 9; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"ccc_00%d", i];
+        SKTexture *run = [captainAnimatedAtlas textureNamed:textureName];
+        [walkFrames addObject:run];
+    }
+    //FIX HARD CODED RUNS 10-12
+    SKTexture *run10 = [captainAnimatedAtlas textureNamed:@"ccc_010"];
+    SKTexture *run11= [captainAnimatedAtlas textureNamed:@"ccc_011"];
+    SKTexture *run12= [captainAnimatedAtlas textureNamed:@"ccc_012"];
+    
+    [walkFrames addObject:run10];
+    [walkFrames addObject:run11];
+    [walkFrames addObject:run12];
+    
+    self.walkFramesRight = walkFrames;
+    
+    return self.walkFramesRight;
 }
 
 

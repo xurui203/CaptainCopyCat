@@ -12,9 +12,7 @@
 @interface LevelOneMazeScene ()
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
-@property NSArray *walkAnimation;
-@property (nonatomic) Captain *captain;
-@property (nonatomic, strong) NSArray *walkFramesRight;
+@property Captain *captain;
 @property (nonatomic) SKNode *player;
 @end
 
@@ -28,14 +26,7 @@
 @synthesize sequence;
 @synthesize walkAnim;
 
-//-(SKAction *)walkRight {
-//    if (_walkRight == nil) {
-//        self.walkFramesRight = [[self class] animationFramesForImageNamePrefix:@"MSWWalkRight-" frameCount:kDefaultNumberOfWalkFrames];
-//        _animateManWalkingRight = [SKAction animateWithTextures:self.walkFramesRight timePerFrame:kShowCharacterFramesOverOneSecond resize:YES restore:NO];
-//    }
-//    
-//    return _animateManWalkingRight;
-//}
+
 #pragma mark - Shared Assets
 + (void)loadSceneAssetsWithCompletionHandler:(APAAssetLoadCompletionHandler)handler {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -55,106 +46,39 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor whiteColor];
-//        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"practiceMazeMap.png"];
-//        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-//        background.name = @"background";
-//        SKAction *walk = [SKAction animateWithTextures:CAPTAIN_ANIM_CCC timePerFrame:0.033];
-//
-////        SKAction *resetDirection   = [SKAction scaleXTo:1  y:1 duration:0.0];
-//        SKAction *walkAnim = [SKAction sequence:@[walk, walk, walk, walk, walk, walk]];
-////    SKAction *moveRight  = [SKAction moveToX:900 duration:walkAnim.duration];
-//        SKAction *moveRight = [SKAction moveByX:100 y:0 duration:walkAnim.duration];
-//        SKAction *walkAndMoveRight = [SKAction group:@[walkAnim, moveRight]];
-//        SKAction *remove = [SKAction removeFromParent];
         
         SKSpriteNode *ground1Sprite = [self makeGround1];
         SKSpriteNode *ground2Sprite = [self makeGround2];
         
-//        NSMutableArray *walkFrames = [NSMutableArray array];
-        
-//        self.walkAnimation = walkFrames;
-//        [self addChild:background];
         [self addChild:ground1Sprite];
         [self addChild:ground2Sprite];
         
         [self startLevel];
-//        self.sequence = [SKAction repeatActionForever:[SKAction sequence:@[remove, walkAndMoveRight]]];
         
-        
-        NSMutableArray *walkFrames = [NSMutableArray array];
-        SKTextureAtlas *captainAnimatedAtlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
-        int numImages = captainAnimatedAtlas.textureNames.count;
-        for (int i=1; i <= 9; i++) {
-            NSString *textureName = [NSString stringWithFormat:@"ccc_00%d", i];
-            SKTexture *run = [captainAnimatedAtlas textureNamed:textureName];
-            [walkFrames addObject:run];
-        }
-        //FIX HARD CODED RUNS 10-12
-        SKTexture *run10 = [captainAnimatedAtlas textureNamed:@"ccc_010"];
-        SKTexture *run11= [captainAnimatedAtlas textureNamed:@"ccc_011"];
-        SKTexture *run12= [captainAnimatedAtlas textureNamed:@"ccc_012"];
-        
-        [walkFrames addObject:run10];
-        [walkFrames addObject:run11];
-        [walkFrames addObject:run12];
+        //INITIALIZE A CAPTAIN
+//        self.captain = [[Captain alloc]init];
+//        self.captain.position = CGPointMake(CGRectGetMidX(self.frame),
+//                                       CGRectGetMidY(self.frame));
+//        [self addChild:[self.captain createCaptain]];
+//
+//        [self walkingCaptain];
 
-        self.walkAnimation = walkFrames;
-        
-        SKTexture *temp = self.walkAnimation[0];
-        self.captain = [SKSpriteNode spriteNodeWithTexture:temp];
-        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-200, CGRectGetMidY(self.frame)-60);
-        [self addChild:self.captain];
-        [self walkingCaptain];
     }
     return self;
 }
 
 
+
+//General method to make captain walk
 -(void)walkingCaptain
 {
-    //This is our general runAction method to make our bear walk.
     [self.captain runAction:[SKAction repeatActionForever:
-                      [SKAction animateWithTextures:self.walkAnimation
+                      [SKAction animateWithTextures:self.captain.walkAnimationFrames
                                        timePerFrame:0.1f
                                              resize:NO
                                             restore:YES]] withKey:@"walkingInPlaceCaptain"];
     return;
 }
-//- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    // each time the user touches the screen, we create a new sprite, set its position, ...
-////    self.captain = [Captain spriteNodeWithTexture:CAPTAIN_TEX_CCC_005 size:CGSizeMake(100, 1)];
-////    captainWalking.position = self.captain.position;
-//    
-//    // ... attach the action with the walk animation, and add it to our scene
-//    self.captain.position =CGPointMake(20,130);
-//
-//    [self.captain runAction:sequence];
-//    [self addChild:self.captain];
-//
-//    //CGPoint location = [self.captain position];
-//    
-////    SKSpriteNode *captainCC = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
-////    captainCC.position = CGPointMake(20,130);
-////    captainCC.zPosition=1;
-////    captainCC.scale = 0.5;
-////    SKAction *action = [SKAction moveToX:self.frame.size.height-100 duration:3];
-////    SKAction *remove = [SKAction removeFromParent];
-////    [self.captain runAction:[SKAction sequence:@[action,remove]]];
-////    [self addChild:captainCC];
-//    
-////    if (self.captain != nil)
-////    {
-////        SKAction *animate = [SKAction
-////                             animateWithTextures:self.walkAnimation
-////                             timePerFrame: 0.05];
-////        [self.captain runAction:animate];
-////    }
-////    
-
-////    }
-//}
-//
 
 
 -(SKSpriteNode *)makeGround1
@@ -191,15 +115,16 @@
 //INITIALIZE A CAPTAIN OBJECT
 -(void)showCaptain {
           self.captain = [[Captain alloc]init];
-//            captain.alpha= 1.0f;
-        [self addChild:[self.captain createCaptain]];
+        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
+                                        CGRectGetMidY(self.frame));
+    [self addChild:[self.captain createCaptain]];
     
+    //[self walkingCaptain];
     [self setUpActions];
 }
 
 
 
-// Add these new methods
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
@@ -209,13 +134,16 @@
     if (location.x <= CGRectGetMidX(self.frame)) {
         //walk left
         multiplierForDirection = 1;
+        NSLog(@"walking left");
     } else {
         //walk right
         multiplierForDirection = -1;
+        NSLog(@"walking right");
+
     }
     
-    _captain.xScale = fabs(_captain.xScale) * multiplierForDirection;
-    [self captain];
+    self.captain.xScale = fabs(self.captain.xScale) * multiplierForDirection;
+    [self walkingCaptain];
 }
 
 
@@ -223,11 +151,7 @@
 
     SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
     [captain runAction:walkAnim];
-    
-    
-    
-    
-    
+
 }
 -(void)update:(NSTimeInterval)currentTime {
 
@@ -243,31 +167,16 @@
 }
 
 -(void) setUpActions {
-//         SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CCC_running"];
-//                  SKTexture *run2 = [atlas textureNamed:@"ccc_002"];
-//         SKTexture *run3 = [atlas textureNamed:@"ccc_003"];
-//         SKTexture *run4 = [atlas textureNamed:@"ccc_004"];
-//         SKTexture *run5 = [atlas textureNamed:@"ccc_005"];
-//         SKTexture *run6 = [atlas textureNamed:@"ccc_006"];
-//         SKTexture *run7 = [atlas textureNamed:@"ccc_007"];
-//         SKTexture *run8 = [atlas textureNamed:@"ccc_008"];
-//         SKTexture *run9 = [atlas textureNamed:@"ccc_009"];
-//         SKTexture *run10 = [atlas textureNamed:@"ccc_010"];
-//         SKTexture *run11= [atlas textureNamed:@"ccc_011"];
-//         SKTexture *run12= [atlas textureNamed:@"ccc_012"];
-//         NSArray *atlasTexture = @[run2,run3,run4,run5,run6,run7,run8,run9,run10,run11,run12];
-//
-//         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.05];
-//         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:atlasAnim.duration];
-//
-////         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
-////         SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
-//
-//
-//         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
-//         
-//         SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-//         [captain runAction:walkAnim];
+         SKAction *atlasAnim = [SKAction animateWithTextures:self.captain.walkAnimationFrames timePerFrame:.05];
+         //SKAction *moveRight = [SKAction moveByX:50 y:0 duration:atlasAnim.duration];
+    
+//         SKAction *atlasAnim = [SKAction animateWithTextures:atlasTexture timePerFrame:.1];
+          SKAction *moveRight = [SKAction moveByX:50 y:0 duration:.3];
+
+         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
+    
+        SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+         [captain runAction:walkAnim];
      }
 
 -(void)startLevel {
