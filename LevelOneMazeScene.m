@@ -66,7 +66,10 @@
         
         
         
-        captain.position = CGPointMake(100, 170);
+      //  captain.position = CGPointMake(100, 170);
+        
+        self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
+                                              CGRectGetMidY(self.frame)-90);
         captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
         captain.physicsBody.mass = 50.0f;
         captain.physicsBody.dynamic = YES;
