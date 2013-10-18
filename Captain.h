@@ -91,6 +91,9 @@
 - (NSArray *)walkAnimationFrames;
 - (NSArray *)getCaptainWalkFrames;
 
+@property (nonatomic, assign) BOOL forwardMarch;
+@property (nonatomic, assign) BOOL mightAsWellJump;
+
 
 
 /* Assets - should be overridden for animated characters. */

@@ -26,6 +26,11 @@
 		3E5EC22317FE58210029F506 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22017FE58210029F506 /* LoginViewController.m */; };
 		3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */; };
 		3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5EC22617FE64510029F506 /* MainMenuViewController.m */; };
+		3EB1D385181167F1007BAB42 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB1D384181167F1007BAB42 /* libz.dylib */; };
+		3EB1D38A18116830007BAB42 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB1D38718116830007BAB42 /* LFCGzipUtility.m */; };
+		3EB1D38B18116830007BAB42 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB1D38918116830007BAB42 /* JSTileMap.m */; };
+		3EB1D38D1811687B007BAB42 /* level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3EB1D38C1811687B007BAB42 /* level1.tmx */; };
+		3EB1D38F18116898007BAB42 /* tileSet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB1D38E18116898007BAB42 /* tileSet.png */; };
 		3EF5B7A81801FD06003679D9 /* LevelOneMazeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5B7A71801FD06003679D9 /* LevelOneMazeScene.m */; };
 		3EF5B7AB18020772003679D9 /* practiceMazeMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AA18020772003679D9 /* practiceMazeMap.png */; };
 		3EF5B7AE18020EC0003679D9 /* Captain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5B7AD18020EC0003679D9 /* Captain.m */; };
@@ -81,6 +86,13 @@
 		3E5EC22217FE58210029F506 /* LearningModulesMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMainViewController.m; sourceTree = "<group>"; };
 		3E5EC22517FE64510029F506 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		3E5EC22617FE64510029F506 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		3EB1D384181167F1007BAB42 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3EB1D38618116830007BAB42 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		3EB1D38718116830007BAB42 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		3EB1D38818116830007BAB42 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
+		3EB1D38918116830007BAB42 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		3EB1D38C1811687B007BAB42 /* level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level1.tmx; sourceTree = "<group>"; };
+		3EB1D38E18116898007BAB42 /* tileSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileSet.png; sourceTree = "<group>"; };
 		3EF5B7A61801FD06003679D9 /* LevelOneMazeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelOneMazeScene.h; sourceTree = "<group>"; };
 		3EF5B7A71801FD06003679D9 /* LevelOneMazeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelOneMazeScene.m; sourceTree = "<group>"; };
 		3EF5B7AA18020772003679D9 /* practiceMazeMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = practiceMazeMap.png; sourceTree = "<group>"; };
@@ -112,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB1D385181167F1007BAB42 /* libz.dylib in Frameworks */,
 				3E16BA9017F541C200EC71DC /* CoreGraphics.framework in Frameworks */,
 				3E16BA9217F541C200EC71DC /* UIKit.framework in Frameworks */,
 				3E16BA9417F541C200EC71DC /* SpriteKit.framework in Frameworks */,
@@ -135,6 +148,12 @@
 		3E16BA8117F541C200EC71DC = {
 			isa = PBXGroup;
 			children = (
+				3EB1D38E18116898007BAB42 /* tileSet.png */,
+				3EB1D38C1811687B007BAB42 /* level1.tmx */,
+				3EB1D38618116830007BAB42 /* LFCGzipUtility.h */,
+				3EB1D38718116830007BAB42 /* LFCGzipUtility.m */,
+				3EB1D38818116830007BAB42 /* JSTileMap.h */,
+				3EB1D38918116830007BAB42 /* JSTileMap.m */,
 				3E44B3611805D23A00E8EA8B /* CCC_running.atlas */,
 				3E44B35B1805B10000E8EA8B /* Captain.atlasc */,
 				3EF5B7A91801FD17003679D9 /* Scenes */,
@@ -157,6 +176,7 @@
 		3E16BA8C17F541C200EC71DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EB1D384181167F1007BAB42 /* libz.dylib */,
 				3E16BA8D17F541C200EC71DC /* Foundation.framework */,
 				3E16BA8F17F541C200EC71DC /* CoreGraphics.framework */,
 				3E16BA9117F541C200EC71DC /* UIKit.framework */,
@@ -359,9 +379,11 @@
 				5B479E0718013A81009A6818 /* HomeIcon.png in Resources */,
 				5BC218DD18013EED001FC9A1 /* Eagle.png in Resources */,
 				5B479DFC180131CF009A6818 /* Kangeroo.png in Resources */,
+				3EB1D38F18116898007BAB42 /* tileSet.png in Resources */,
 				3E44B35D1805B10000E8EA8B /* Captain.atlasc in Resources */,
 				5B479DF518012A95009A6818 /* CCCHomepage.png in Resources */,
 				3E16BA9A17F541C200EC71DC /* InfoPlist.strings in Resources */,
+				3EB1D38D1811687B007BAB42 /* level1.tmx in Resources */,
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
 				5BC218DF18013F2F001FC9A1 /* Gecko.png in Resources */,
@@ -387,7 +409,9 @@
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
 				3EF5B7A81801FD06003679D9 /* LevelOneMazeScene.m in Sources */,
 				3EF5B7BB1802A8B1003679D9 /* SuperpowerDrawer.m in Sources */,
+				3EB1D38A18116830007BAB42 /* LFCGzipUtility.m in Sources */,
 				3EF5B7AE18020EC0003679D9 /* Captain.m in Sources */,
+				3EB1D38B18116830007BAB42 /* JSTileMap.m in Sources */,
 				5BC218E2180142EA001FC9A1 /* Obstacle.m in Sources */,
 				3E5EC22717FE64510029F506 /* MainMenuViewController.m in Sources */,
 				5B479DF818012EFF009A6818 /* MazeLevelsViewController.m in Sources */,

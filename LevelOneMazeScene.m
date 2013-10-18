@@ -8,12 +8,15 @@
 
 #import "LevelOneMazeScene.h"
 #import "Captain.h"
+#import "JSTileMap.h"
+#import "LFCGzipUtility.h"
 
 @interface LevelOneMazeScene ()
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
 @property Captain *captain;
 @property (nonatomic) SKNode *player;
+@property (nonatomic) JSTileMap *tiledMap;
 @end
 
 
@@ -25,7 +28,8 @@
 }
 @synthesize sequence;
 @synthesize walkAnim;
-
+@synthesize tiledMap;
+@synthesize captain;
 
 #pragma mark - Shared Assets
 + (void)loadSceneAssetsWithCompletionHandler:(APAAssetLoadCompletionHandler)handler {
@@ -47,15 +51,47 @@
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor whiteColor];
         
-        SKSpriteNode *ground1Sprite = [self makeGround1];
-        SKSpriteNode *ground2Sprite = [self makeGround2];
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
+        self.physicsWorld.contactDelegate = self;
         
-        [self addChild:ground1Sprite];
-        [self addChild:ground2Sprite];
         
-        [self startLevel];
+        tiledMap = [JSTileMap mapNamed:@"level1.tmx"];
+        if (tiledMap){
+            [self addChild:tiledMap];
+        }
+        tiledMap.zPosition = 0;
+        
+        captain = [[Captain alloc] init];
+        captain.position = CGPointMake(100, 170);
+        captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
+        captain.physicsBody.mass = 50.0f;
+        captain.physicsBody.dynamic = YES;
+        captain.physicsBody.usesPreciseCollisionDetection = YES;
+        
+        captain.name = @"captain";
+        [tiledMap addChild:captain];
+        captain.zPosition = 15;
+//        SKSpriteNode *ground1Sprite = [self makeGround1];
+//        SKSpriteNode *ground2Sprite = [self makeGround2];
+//        
+//        [self addChild:ground1Sprite];
+//        [self addChild:ground2Sprite];
+//        
+//        [self startLevel];
+            [self setUpActions];
+      
     }
     return self;
+}
+- (void)didSimulatePhysics
+{
+    [self centerOnNode: [self childNodeWithName: @"//camera"]];
+}
+
+- (void) centerOnNode: (SKNode *) node
+{
+    CGPoint cameraPositionInScene = [node.scene convertPoint:node.position fromNode:node.parent];
+    node.parent.position = CGPointMake(node.parent.position.x - cameraPositionInScene.x,                                       node.parent.position.y - cameraPositionInScene.y);
 }
 
 -(SKSpriteNode *)makeGround1
@@ -92,7 +128,7 @@
 //General method to make captain walk
 -(void)walkingCaptain
 {
-    SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+//    SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
 
     [captain runAction:[SKAction repeatActionForever:
                              [SKAction animateWithTextures:self.captain.walkAnimationFrames
@@ -105,7 +141,9 @@
 
 //INITIALIZE A CAPTAIN OBJECT
 -(void)initializeCaptain {
-    self.captain = [[Captain alloc]init];
+    
+    captain = [[Captain alloc]init];
+//    self.captain = [[Captain alloc]init];
     self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
                                         CGRectGetMidY(self.frame)-70);
     [self addChild:self.captain.createCaptain];
@@ -116,17 +154,52 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+    captain.forwardMarch = NO;
+    for (UITouch *t in touches) {
+        UITouch * touch = [touches anyObject];
+        CGPoint pos = [touch locationInView: [UIApplication sharedApplication].keyWindow];
+        NSLog(@"Position of touch: %.3f, %.3f", pos.x, pos.y);
+        
+        if (pos.x < 140) {
+            captain.forwardMarch = NO;
+        } else {
+            captain.mightAsWellJump = NO;
+        }
+    }
 
     NSLog(@"Touches ended");
-    [self walkingCaptain];
+//    [self walkingCaptain];
 }
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
-    SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-    [captain runAction:walkAnim];
-    NSLog(@"Touches began");
+//    SKSpriteNode *captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
+//    [captain runAction:walkAnim];
+//    NSLog(@"Touches began");
+    
+    
+    for (UITouch *t in touches) {
+        
+        UITouch * touch = [touches anyObject];
+        CGPoint pos = [touch locationInView: [UIApplication sharedApplication].keyWindow];
+        NSLog(@"Position of touch: %.3f, %.3f", pos.x, pos.y);
+        
+        //        if (pos.x > 140) {
+        ////            captain.mightAsWellJump = YES;
+        //        } else {
+        //            captain.forwardMarch = YES;
+        //
+        //
+        //        }
+        
+        if (pos.x >140) {
+            captain.forwardMarch = YES;
+        }
+    }
+    
+    
 
 }
 -(void)update:(NSTimeInterval)currentTime {
@@ -140,26 +213,53 @@
         };
         
     }];
+    if (captain.forwardMarch) {
+        [captain runAction:walkAnim];
+
+    }
+    
+    
+    
+    [self setViewpointCenter:captain.position];
+
 }
 
+-(void)setViewpointCenter:(CGPoint) position {
+    
+    CGSize winSize = self.view.frame.size;
+    
+    int x = MAX(position.x, winSize.width / 2);
+    int y = MAX(position.y, winSize.height / 2);
+    x = MIN(x, (tiledMap.mapSize.width * tiledMap.tileSize.width)
+            - winSize.width / 2);
+    y = MIN(y, (tiledMap.mapSize.height * tiledMap.tileSize.height)
+            - winSize.height/2);
+    CGPoint actualPosition = CGPointMake(x, y);
+    
+    CGPoint centerOfView = CGPointMake(winSize.width/2, winSize.height/2);
+    CGPoint viewPoint = CGPointMake(centerOfView.x-actualPosition.x, centerOfView.y-actualPosition.y);
+    tiledMap.position = viewPoint;
+}
+
+
 -(void) setUpActions {
-        SKAction *atlasAnim = [SKAction animateWithTextures:self.captain.walkAnimationFrames timePerFrame:.05];
+        SKAction *atlasAnim = [SKAction animateWithTextures:captain.walkAnimationFrames timePerFrame:.05];
         SKAction *moveRight = [SKAction moveByX:40 y:0 duration:.3];
         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
 
      }
 
--(void)startLevel {
-    [self performSelector:@selector(initializeCaptain) withObject:Nil afterDelay:2.0];
-
-}
+//-(void)startLevel {
+//    [self performSelector:@selector(initializeCaptain) withObject:Nil afterDelay:2.0];
+//
+//}
 
 
 -(void)moveRight {
     NSLog(@"moveRight");
     SKAction *hover = [SKAction moveByX:100.0 y:0 duration:1.0];
-    [self.captain runAction:hover];
-    [self addChild:self.captain];
+    [captain runAction:hover];
+//    [self addChild:captain];
 }
 
 @end

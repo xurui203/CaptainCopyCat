@@ -15,10 +15,13 @@
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
 @property (nonatomic, strong) NSArray *walkFramesRight;
+
+
 @end
 
 @implementation Captain
 
+@synthesize forwardMarch = _forwardMarch, mightAsWellJump = _mightAsWellJump;
 
 
 + (void)loadSharedAssets {
@@ -26,10 +29,12 @@
 }
 
 #pragma mark - Initialization
-- (void)initialize {
-    SKSpriteNode *captain = [self createCaptain];
-    [self addChild:captain];
 
+-(id)initWithFile:(NSString *)filename {
+    if (self = [super initWithImageNamed:filename]) {
+        //Init goes here
+    }
+    return self;
 }
 
 -(SKSpriteNode*) createCaptain {
