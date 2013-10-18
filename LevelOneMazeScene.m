@@ -142,13 +142,13 @@
 }
 
 -(void) setUpActions {
-    SKAction *atlasAnim = [SKAction animateWithTextures:_captain.walkAnimationFrames timePerFrame:.05];
+    SKAction *atlasAnim = [SKAction animateWithTextures:self.captain.walkAnimationFrames timePerFrame:.05];
     SKAction *moveRight = [SKAction moveByX:30 y:0 duration:.2];
 
     walkAnim = [SKAction group:@[atlasAnim,moveRight]];
     
     SKSpriteNode* captain = (SKSpriteNode*)[self childNodeWithName:@"captain"];
-    //[captain runAction:walkAnim];
+    [captain runAction:walkAnim];
 }
 
 -(void)startLevel {
