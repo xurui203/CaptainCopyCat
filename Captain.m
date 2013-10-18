@@ -15,7 +15,7 @@
 //@property (nonatomic) NSTimeInterval lastUpdateTimeInterval; // the previous update: loop time interval
 @property BOOL sceneCreated;
 @property (nonatomic) Captain *captain;
-@property (nonatomic, strong) NSArray *walkFramesRight;
+@property (nonatomic, strong) NSArray *walkFramesRight; //**MOVE OUT FROM THIS CLASS TO CAPTAIN CLASS**//
 @end
 
 @implementation Captain
@@ -29,22 +29,27 @@
 #pragma mark - Initialization
 - (void)initialize {
     SKSpriteNode *captain = [self createCaptain];
+    
+//    SKSpriteNode *captain = [SKSpriteNode spriteNodeWithImageNamed:@"ccc_008.png"];
+// 
     [self addChild:captain];
 
 }
 
 -(SKSpriteNode*) createCaptain {
     SKTexture *temp = self.walkAnimationFrames[0];
+    //   self.captain = [Captain spriteNodeWithTexture:temp]
     SKSpriteNode *captain = [SKSpriteNode spriteNodeWithTexture:temp];
     
     captain.position = CGPointMake(CGRectGetMidX(self.frame),
                                    CGRectGetMidY(self.frame));
     captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
-    captain.physicsBody.mass = 10.0f;
-    captain.physicsBody.dynamic = NO;
+    captain.physicsBody.mass = 50.0f;
+    captain.physicsBody.dynamic = YES;
     captain.physicsBody.usesPreciseCollisionDetection = YES;
 
     captain.name = @"captain";
+//    captain.zPosition = 100;
     NSLog(@"createdcaptain");
     return captain;
 }
