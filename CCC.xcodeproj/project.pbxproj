@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317CA3BA1814F1A600D775BC /* PitObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 317CA3B91814F1A600D775BC /* PitObstacle.m */; };
 		3E16BA8E17F541C200EC71DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA8D17F541C200EC71DC /* Foundation.framework */; };
 		3E16BA9017F541C200EC71DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA8F17F541C200EC71DC /* CoreGraphics.framework */; };
 		3E16BA9217F541C200EC71DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA9117F541C200EC71DC /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		317CA3B81814F1A600D775BC /* PitObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitObstacle.h; sourceTree = "<group>"; };
+		317CA3B91814F1A600D775BC /* PitObstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitObstacle.m; sourceTree = "<group>"; };
 		3E16BA8A17F541C200EC71DC /* CCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E16BA8D17F541C200EC71DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E16BA8F17F541C200EC71DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,9 +148,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		317CA3B71814F15E00D775BC /* Obstacles */ = {
+			isa = PBXGroup;
+			children = (
+				317CA3B81814F1A600D775BC /* PitObstacle.h */,
+				317CA3B91814F1A600D775BC /* PitObstacle.m */,
+			);
+			name = Obstacles;
+			sourceTree = "<group>";
+		};
 		3E16BA8117F541C200EC71DC = {
 			isa = PBXGroup;
 			children = (
+				317CA3B71814F15E00D775BC /* Obstacles */,
 				3EB1D38E18116898007BAB42 /* tileSet.png */,
 				3EB1D38C1811687B007BAB42 /* level1.tmx */,
 				3EB1D38618116830007BAB42 /* LFCGzipUtility.h */,
@@ -407,6 +420,7 @@
 			files = (
 				5B479E021801380D009A6818 /* LevelOneMaze.m in Sources */,
 				3E5EC22417FE58210029F506 /* LearningModulesMainViewController.m in Sources */,
+				317CA3BA1814F1A600D775BC /* PitObstacle.m in Sources */,
 				3EF5B7A81801FD06003679D9 /* LevelOneMazeScene.m in Sources */,
 				3EF5B7BB1802A8B1003679D9 /* SuperpowerDrawer.m in Sources */,
 				3EB1D38A18116830007BAB42 /* LFCGzipUtility.m in Sources */,
