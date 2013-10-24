@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LevelOneMazeViewController : UIViewController
+@interface LevelOneMazeViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

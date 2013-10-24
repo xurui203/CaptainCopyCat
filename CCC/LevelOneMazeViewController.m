@@ -41,6 +41,12 @@
     [super viewDidLoad];
     [self.moveLeftButton setHidden:YES];
     [self.moveRightButton setHidden:YES];
+    
+    // Swipe Stuff
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(screenWasSwiped)];
+    swipeUp.numberOfTouchesRequired = 1;
+    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipeUp];
 
 	// Do any additional setup after loading the view.
 }

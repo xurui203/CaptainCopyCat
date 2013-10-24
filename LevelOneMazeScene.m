@@ -54,7 +54,7 @@
         self.physicsWorld.gravity = CGVectorMake(0, -9.8f);
         self.physicsWorld.contactDelegate = self;
         
-        /// FAKE GROUND FOR TESTING PURPOSES
+        // FAKE GROUND FOR TESTING PURPOSES
         SKSpriteNode *pseudoGround = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(500,20)];
         pseudoGround.position = CGPointMake(CGRectGetMidX(self.frame) - 150,                              CGRectGetMidY(self.frame)-110);
         pseudoGround.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pseudoGround.size];
@@ -241,6 +241,9 @@
 -(void) setUpActions {
         SKAction *atlasAnim = [SKAction animateWithTextures:captain.walkAnimationFrames timePerFrame:.05];
         SKAction *moveRight = [SKAction moveByX:40 y:0 duration:.3];
+
+//        SKAction *jumpUp = [SKAction moveByX:0 y:50 duration:.3];
+    
         walkAnim = [SKAction group:@[atlasAnim,moveRight]];
 
      }
