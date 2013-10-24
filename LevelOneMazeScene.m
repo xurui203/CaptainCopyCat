@@ -51,8 +51,15 @@
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor whiteColor];
         
-        self.physicsWorld.gravity = CGVectorMake(0, 0);
+        self.physicsWorld.gravity = CGVectorMake(0, -9.8f);
         self.physicsWorld.contactDelegate = self;
+        
+        /// FAKE GROUND FOR TESTING PURPOSES
+        SKSpriteNode *pseudoGround = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(500,20)];
+        pseudoGround.position = CGPointMake(CGRectGetMidX(self.frame) - 150,                              CGRectGetMidY(self.frame)-110);
+        pseudoGround.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:pseudoGround.size];
+        pseudoGround.physicsBody.dynamic = NO;
+        [self addChild:pseudoGround];
         
         
         tiledMap = [JSTileMap mapNamed:@"level1.tmx"];
@@ -65,12 +72,11 @@
         captain = [Captain spriteNodeWithTexture:temp];
         
         
-        
       //  captain.position = CGPointMake(100, 170);
         
         self.captain.position = CGPointMake(CGRectGetMidX(self.frame)-150,
-                                              CGRectGetMidY(self.frame)-90);
-        captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(1, 1)];
+                                              CGRectGetMidY(self.frame) - 10);
+        captain.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(60, 80)];
         captain.physicsBody.mass = 50.0f;
         captain.physicsBody.dynamic = YES;
         captain.physicsBody.usesPreciseCollisionDetection = YES;
@@ -90,6 +96,8 @@
     }
     return self;
 }
+
+
 - (void)didSimulatePhysics
 {
     [self centerOnNode: [self childNodeWithName: @"//camera"]];
