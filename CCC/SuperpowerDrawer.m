@@ -8,6 +8,10 @@
 
 #import "SuperpowerDrawer.h"
 
+@interface SuperpowerDrawer ()
+@property (nonatomic, strong) NSArray *superpowers;
+@end
+
 @implementation SuperpowerDrawer
 
 - (id)initWithFrame:(CGRect)frame
