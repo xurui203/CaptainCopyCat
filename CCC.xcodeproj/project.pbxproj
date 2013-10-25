@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311616CB181A75A500974165 /* Back Graphics-KL 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 311616CA181A75A500974165 /* Back Graphics-KL 1.png */; };
+		311616CD181A75AE00974165 /* Back Graphics-KL 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 311616CC181A75AE00974165 /* Back Graphics-KL 2.png */; };
+		311616CF181A75B500974165 /* Fore Graphics KL-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 311616CE181A75B500974165 /* Fore Graphics KL-2.png */; };
+		311616D1181A75BA00974165 /* Fore graphics-KL 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 311616D0181A75BA00974165 /* Fore graphics-KL 1.png */; };
 		317CA3BA1814F1A600D775BC /* PitObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 317CA3B91814F1A600D775BC /* PitObstacle.m */; };
 		3E16BA8E17F541C200EC71DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA8D17F541C200EC71DC /* Foundation.framework */; };
 		3E16BA9017F541C200EC71DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16BA8F17F541C200EC71DC /* CoreGraphics.framework */; };
@@ -61,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		311616CA181A75A500974165 /* Back Graphics-KL 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back Graphics-KL 1.png"; path = "../../Dropbox/CompSci 408 Materials/Content/Mazes/Practice Modules/Kangaroo Legs/Path-KL/Back Graphics-KL 1.png"; sourceTree = "<group>"; };
+		311616CC181A75AE00974165 /* Back Graphics-KL 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back Graphics-KL 2.png"; path = "../../Dropbox/CompSci 408 Materials/Content/Mazes/Practice Modules/Kangaroo Legs/Path-KL/Back Graphics-KL 2.png"; sourceTree = "<group>"; };
+		311616CE181A75B500974165 /* Fore Graphics KL-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fore Graphics KL-2.png"; path = "../../Dropbox/CompSci 408 Materials/Content/Mazes/Practice Modules/Kangaroo Legs/Path-KL/Fore Graphics KL-2.png"; sourceTree = "<group>"; };
+		311616D0181A75BA00974165 /* Fore graphics-KL 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fore graphics-KL 1.png"; path = "../../Dropbox/CompSci 408 Materials/Content/Mazes/Practice Modules/Kangaroo Legs/Path-KL/Fore graphics-KL 1.png"; sourceTree = "<group>"; };
 		317CA3B81814F1A600D775BC /* PitObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitObstacle.h; sourceTree = "<group>"; };
 		317CA3B91814F1A600D775BC /* PitObstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitObstacle.m; sourceTree = "<group>"; };
 		3E16BA8A17F541C200EC71DC /* CCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311616C9181A756900974165 /* random images */ = {
+			isa = PBXGroup;
+			children = (
+				311616CE181A75B500974165 /* Fore Graphics KL-2.png */,
+				311616CC181A75AE00974165 /* Back Graphics-KL 2.png */,
+			);
+			name = "random images";
+			sourceTree = "<group>";
+		};
 		317CA3B71814F15E00D775BC /* Obstacles */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +177,9 @@
 		3E16BA8117F541C200EC71DC = {
 			isa = PBXGroup;
 			children = (
+				311616CA181A75A500974165 /* Back Graphics-KL 1.png */,
+				311616D0181A75BA00974165 /* Fore graphics-KL 1.png */,
+				311616C9181A756900974165 /* random images */,
 				317CA3B71814F15E00D775BC /* Obstacles */,
 				3EB1D38E18116898007BAB42 /* tileSet.png */,
 				3EB1D38C1811687B007BAB42 /* level1.tmx */,
@@ -385,12 +405,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311616CF181A75B500974165 /* Fore Graphics KL-2.png in Resources */,
+				311616CB181A75A500974165 /* Back Graphics-KL 1.png in Resources */,
 				5B479DFA18012FCF009A6818 /* CCCHomepage_iPhone5.png in Resources */,
 				3EF5B7AB18020772003679D9 /* practiceMazeMap.png in Resources */,
 				3EF5B7B0180257C5003679D9 /* Captain_idle.atlas in Resources */,
 				3E44B3621805D23A00E8EA8B /* CCC_running.atlas in Resources */,
 				5B479E0718013A81009A6818 /* HomeIcon.png in Resources */,
 				5BC218DD18013EED001FC9A1 /* Eagle.png in Resources */,
+				311616CD181A75AE00974165 /* Back Graphics-KL 2.png in Resources */,
 				5B479DFC180131CF009A6818 /* Kangeroo.png in Resources */,
 				3EB1D38F18116898007BAB42 /* tileSet.png in Resources */,
 				3E44B35D1805B10000E8EA8B /* Captain.atlasc in Resources */,
@@ -400,6 +423,7 @@
 				3E16BAAB17F541C300EC71DC /* Spaceship.png in Resources */,
 				3E16BAA317F541C200EC71DC /* Main.storyboard in Resources */,
 				5BC218DF18013F2F001FC9A1 /* Gecko.png in Resources */,
+				311616D1181A75BA00974165 /* Fore graphics-KL 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,9 +50,18 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor whiteColor];
-        
+    
         self.physicsWorld.gravity = CGVectorMake(0, -9.8f);
         self.physicsWorld.contactDelegate = self;
+        
+        
+//        SKSpriteNode* background = [SKSpriteNode spriteNodeWithImageNamed:@"Back Graphics-KL 1.png"];
+//        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+//        [self addChild:background];
+//        background.zPosition = 100;
+        
+        
+        
         
         // FAKE GROUND FOR TESTING PURPOSES
         SKSpriteNode *pseudoGround = [[SKSpriteNode alloc] initWithColor:[SKColor grayColor] size:CGSizeMake(500,20)];
