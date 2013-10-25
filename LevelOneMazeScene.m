@@ -18,6 +18,7 @@
 @property (nonatomic) SKNode *player;
 @property (nonatomic) JSTileMap *tiledMap;
 @end
+ 
 
 @implementation LevelOneMazeScene
 {
