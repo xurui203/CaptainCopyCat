@@ -19,7 +19,6 @@
 @property (nonatomic) JSTileMap *tiledMap;
 @end
 
-
 @implementation LevelOneMazeScene
 {
     NSTimeInterval _currentTime;
