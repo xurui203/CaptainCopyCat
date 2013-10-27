@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Ann Niou. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface Superpower : NSObject
 

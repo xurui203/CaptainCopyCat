@@ -19,14 +19,12 @@
 
 - (NSArray *)transformAnimationFrames {
     
-//    NSMutableArray *transformFrames = [NSMutableArray array];
-//    SKTextureAtlas *kangarooTransformationAtlas = [SKTextureAtlas atlasNamed:@"Kangaroo_transform"];
-//        NSString *textureName = [NSString stringWithFormat:@"kangaroo_standing"];
-//        SKTexture *stand = [kangarooTransformationAtlas textureNamed:textureName];
-//        [transformationFrames addObject:stand];
-//    }
-//    return transformFrames;
-    return NULL;
+    NSMutableArray *transformFrames = [NSMutableArray array];
+    SKTextureAtlas *kangarooTransformationAtlas = [SKTextureAtlas atlasNamed:@"Kangaroo_transform"];
+    NSString *textureName = [NSString stringWithFormat:@"kangaroo_standing"];
+    SKTexture *stand = [kangarooTransformationAtlas textureNamed:textureName];
+    [transformFrames addObject:stand];
+    return transformFrames;
 }
 
 

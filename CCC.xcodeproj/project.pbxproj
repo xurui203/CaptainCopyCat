@@ -162,7 +162,6 @@
 		3E16BA8117F541C200EC71DC = {
 			isa = PBXGroup;
 			children = (
-				5B484718181AB4EC00B36E02 /* Kangaroo_transform.atlas */,
 				317CA3B71814F15E00D775BC /* Obstacles */,
 				3EB1D38E18116898007BAB42 /* tileSet.png */,
 				3EB1D38C1811687B007BAB42 /* level1.tmx */,
@@ -170,6 +169,7 @@
 				3EB1D38718116830007BAB42 /* LFCGzipUtility.m */,
 				3EB1D38818116830007BAB42 /* JSTileMap.h */,
 				3EB1D38918116830007BAB42 /* JSTileMap.m */,
+				5B484718181AB4EC00B36E02 /* Kangaroo_transform.atlas */,
 				3E44B3611805D23A00E8EA8B /* CCC_running.atlas */,
 				3E44B35B1805B10000E8EA8B /* Captain.atlasc */,
 				3EF5B7A91801FD17003679D9 /* Scenes */,
@@ -205,7 +205,6 @@
 		3E16BA9517F541C200EC71DC /* CCC */ = {
 			isa = PBXGroup;
 			children = (
-				5B484710181AAE6200B36E02 /* Superpowers */,
 				3E16BA9E17F541C200EC71DC /* AppDelegate.h */,
 				3E16BA9F17F541C200EC71DC /* AppDelegate.m */,
 				3E5EC21F17FE58210029F506 /* LoginViewController.h */,
@@ -217,6 +216,7 @@
 				3EF5B7B91802A8B1003679D9 /* SuperpowerDrawer.h */,
 				3EF5B7BA1802A8B1003679D9 /* SuperpowerDrawer.m */,
 				3E5EC22617FE64510029F506 /* MainMenuViewController.m */,
+				5B484710181AAE6200B36E02 /* Superpowers */,
 				3E4ADD4617FB675700353CF4 /* Characters */,
 				3E4ADD4817FB676500353CF4 /* Practice Modules */,
 				3E4ADD4917FB677200353CF4 /* Maze Controllers */,
